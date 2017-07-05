@@ -18,7 +18,7 @@ public class PartieAvanceControleur implements PartieControleur {
     boolean joueurCommence;
     TourListe tours;
     TourIterateur tourIter;
-    Record recordAvanceCourant;
+    Records recordAvanceCourant;
 
     public PartieAvanceControleur() {
         // à compléter
@@ -49,7 +49,7 @@ public class PartieAvanceControleur implements PartieControleur {
     public void miseAJourRecords(String nom, int temps) {
     	recordAvanceCourant.setNomRecordAvance(nom);
     	recordAvanceCourant.setTempsRecordAvance(temps);
-    	EntreeSortieFichier.ecrireRecords(recordAvanceCourant)
+    	EntreeSortieFichier.ecrireRecords(recordAvanceCourant);
         // à compléter
     }
 }
