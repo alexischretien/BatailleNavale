@@ -18,6 +18,7 @@ public class PartieAvanceControleur implements PartieControleur {
     boolean joueurCommence;
     TourListe tours;
     TourIterateur tourIter;
+    Record recordAvanceCourant;
 
     public PartieAvanceControleur() {
         // à compléter
@@ -39,13 +40,16 @@ public class PartieAvanceControleur implements PartieControleur {
     }
     public Tour getTourPrecedent() {
         // à compléter
-        return null;
+    	return tours.getElement(tourIter.precedent());
     }
     public Tour getTourSuivant() {
         // à compléter
-        return null;
+    	return tours.getElement(tourIter.suivant());
     }
-    public void miseAJourRecords(String nom) {
+    public void miseAJourRecords(String nom, int temps) {
+    	recordAvanceCourant.setNomRecordAvance(nom);
+    	recordAvanceCourant.setTempsRecordAvance(temps);
+    	EntreeSortieFichier.ecrireRecords(recordAvanceCourant)
         // à compléter
     }
 }

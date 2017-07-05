@@ -14,5 +14,5 @@ public interface PartieControleur {
     public Tour getAttaqueAdversaire();
     public Tour getTourPrecedent();
     public Tour getTourSuivant();
-    public void miseAJourRecords(String nom);
+    public void miseAJourRecords(String nom, int temps);
 }
