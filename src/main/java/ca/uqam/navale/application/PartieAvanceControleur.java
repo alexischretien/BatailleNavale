@@ -35,7 +35,7 @@ public class PartieAvanceControleur implements PartieControleur {
         return null;
     }
     public Tour getAttaqueAdversaire() {
-        // à compléter
+        // à completer
         return null;
     }
     public Tour getTourPrecedent() {
