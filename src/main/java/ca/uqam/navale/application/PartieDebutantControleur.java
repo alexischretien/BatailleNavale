@@ -39,11 +39,11 @@ public class PartieDebutantControleur implements PartieControleur {
     }  
     public Tour getTourPrecedent() {
         // à compléter    	
-        return tours.getElement(tourIter.precedent().getIndex());
+        return tourIter.precedent();
     }
     public Tour getTourSuivant() {
         // à compléter
-        return tours.getElement(tourIter.suivant().getIndex());
+        return tourIter.suivant();
     }
     public void miseAJourRecords(String nom, int temps) {
     	recordDebutantCourant.setNomRecordDebutant(nom);

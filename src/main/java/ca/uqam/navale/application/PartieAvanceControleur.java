@@ -40,11 +40,11 @@ public class PartieAvanceControleur implements PartieControleur {
     }
     public Tour getTourPrecedent() {
         // à compléter
-    	return tours.getElement(tourIter.precedent());
+    	return tourIter.precedent();
     }
     public Tour getTourSuivant() {
         // à compléter
-    	return tours.getElement(tourIter.suivant());
+    	return tourIter.suivant();
     }
     public void miseAJourRecords(String nom, int temps) {
     	recordAvanceCourant.setNomRecordAvance(nom);
