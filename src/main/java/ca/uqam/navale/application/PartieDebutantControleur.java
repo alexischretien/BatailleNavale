@@ -30,7 +30,7 @@ public class PartieDebutantControleur implements PartieControleur {
         return null;
     }
     public Tour attaquerAdversaire(Case c) {
-        // à compléter
+        // à completer
         return null;
     }  
     public Tour getAttaqueAdversaire() {

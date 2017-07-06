@@ -39,7 +39,7 @@ public class PartieAvanceControleur implements PartieControleur {
         return null;
     }
     public Tour getTourPrecedent() {
-        // à compléter
+        // à completer
     	return tourIter.precedent();
     }
     public Tour getTourSuivant() {
