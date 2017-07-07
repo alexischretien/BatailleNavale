@@ -11,6 +11,9 @@ public class Tour {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	public int setChampsAdversaire(Case caseTemporaire, String messageAttaque) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
     //constructeur, setters, getters à compléter
 }

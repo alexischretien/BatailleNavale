@@ -32,27 +32,49 @@ public class PartieAvanceControleur implements PartieControleur {
         // à compléter
         return null;
     }
+    
+    /* Attaque une case adverse et retourne le resultat
+     * @param la case adverse cible
+     * @return le tour courant mis a jour
+     * @see ca.uqam.navale.application.PartieControleur#attaquerAdversaire(ca.uqam.navale.domaine.Case)
+     */
     public Tour attaquerAdversaire(Case c) {
-        // à compléter
-        return null;
+    	String messageAttaque = this.flotteAdversaire.attaquer(c);    	
+    	
+    	this.tours.getElement(this.tourIter.courant().setChampsAdversaire(c,messageAttaque));        
+        return this.tourIter.courant();
     }
+    
     public Tour getAttaqueAdversaire() {
         // à completer
         return null;
     }
-    public Tour getTourPrecedent() {
-        // à completer
-    	return tourIter.precedent();
-    }
-    public Tour getTourSuivant() {
-        // à compléter
-    	return tourIter.suivant();
-    }
-    public void miseAJourRecords(String nom, int temps) {
-    	this.recordAvanceCourant.setNomRecordAvance(nom);
-    	this.recordAvanceCourant.setTempsRecordAvance(temps);
-    	EntreeSortieFichier.ecrireRecords(this.recordAvanceCourant);
-        // à compléter
-    }
+    
+    /* Retourne le tour precedent
+     * @return le tour precedent
+     * @see ca.uqam.navale.application.PartieControleur#getTourPrecedent()
+     */
+     public Tour getTourPrecedent() {           	
+         return this.tourIter.precedent();
+     }
+     
+     /*Retourne le tour suivant
+     * @return le tour suivant
+      * @see ca.uqam.navale.application.PartieControleur#getTourSuivant()
+      */
+     public Tour getTourSuivant() {        
+         return this.tourIter.suivant();
+     }
+     
+     /* Met a jour le document de record
+      * @param nom Le nom du detenteur du nouveau record
+      * @param temps Le temps obtenu
+      * @see ca.uqam.navale.application.PartieControleur#miseAJourRecords(java.lang.String, int)
+      */
+     public void miseAJourRecords(String nom, int temps) {
+     	this.recordAvanceCourant.setNomRecordAvance(nom);
+     	this.recordAvanceCourant.setTempsRecordAvance(temps);
+     	EntreeSortieFichier.ecrireRecords(this.recordAvanceCourant);        
+     }
 }
 

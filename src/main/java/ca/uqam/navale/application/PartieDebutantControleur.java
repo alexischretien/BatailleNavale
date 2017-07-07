@@ -34,9 +34,17 @@ public class PartieDebutantControleur implements PartieControleur {
         // à compléter
         return null;
     }
+    
+    /* Attaque une case adverse et retourne le resultat
+     * @param la case adverse cible
+     * @return le tour courant mis a jour
+     * @see ca.uqam.navale.application.PartieControleur#attaquerAdversaire(ca.uqam.navale.domaine.Case)
+     */
     public Tour attaquerAdversaire(Case c) {
-        // à completer
-        return null;
+    	String messageAttaque = this.flotteAdversaire.attaquer(c);    	
+    	
+    	this.tours.getElement(this.tourIter.courant().setChampsAdversaire(c,messageAttaque));        
+        return this.tourIter.courant();
     }
    
     /*
@@ -82,7 +90,6 @@ public class PartieDebutantControleur implements PartieControleur {
     public void miseAJourRecords(String nom, int temps) {
     	this.recordDebutantCourant.setNomRecordDebutant(nom);
     	this.recordDebutantCourant.setTempsRecordDebutant(temps);
-    	EntreeSortieFichier.ecrireRecords(this.recordDebutantCourant);
-        // à compléter
+    	EntreeSortieFichier.ecrireRecords(this.recordDebutantCourant);        
     }
 }
