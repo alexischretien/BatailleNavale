@@ -14,4 +14,8 @@ public class TourIterateur implements Iterateur {
         // à compléter
         return null;
     }
+    public Tour courant() {
+        // à compléter
+        return null;
+    }
 }

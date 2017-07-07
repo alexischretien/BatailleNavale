@@ -21,9 +21,11 @@ public class PartieAvanceControleur implements PartieControleur {
     Records recordAvanceCourant;
 
     public PartieAvanceControleur() {
+    	init();
         // à compléter
     }
     public void init() {
+    	this.joueurCommence= Math.random()< 0.5;
         // à compléter
     }
     public Tour initFlottes(List<List<Case>> flotte) {
@@ -47,9 +49,9 @@ public class PartieAvanceControleur implements PartieControleur {
     	return tourIter.suivant();
     }
     public void miseAJourRecords(String nom, int temps) {
-    	recordAvanceCourant.setNomRecordAvance(nom);
-    	recordAvanceCourant.setTempsRecordAvance(temps);
-    	EntreeSortieFichier.ecrireRecords(recordAvanceCourant);
+    	this.recordAvanceCourant.setNomRecordAvance(nom);
+    	this.recordAvanceCourant.setTempsRecordAvance(temps);
+    	EntreeSortieFichier.ecrireRecords(this.recordAvanceCourant);
         // à compléter
     }
 }
