@@ -17,34 +17,79 @@ public class PartieDebutantControleur implements PartieControleur {
     boolean joueurCommence;
     TourListe tours;
     TourIterateur tourIter;
+    Records recordDebutantCourant;
 
     public PartieDebutantControleur() {
+    	init();
+    	
+    	
         // à compléter
     }
     public void init() {
+    	this.joueurCommence= Math.random()< 0.5;    	
         // à compléter
     }
     public Tour initFlottes(List<List<Case>> flotte) {
+    	
         // à compléter
         return null;
     }
+    
+    /* Attaque une case adverse et retourne le resultat
+     * @param la case adverse cible
+     * @return le tour courant mis a jour
+     * @see ca.uqam.navale.application.PartieControleur#attaquerAdversaire(ca.uqam.navale.domaine.Case)
+     */
     public Tour attaquerAdversaire(Case c) {
-        // à compléter
-        return null;
-    }  
+    	String messageAttaque = this.flotteAdversaire.attaquer(c);    	
+    	
+    	this.tours.getElement(this.tourIter.courant().setChampsAdversaire(c,messageAttaque));        
+        return this.tourIter.courant();
+    }
+   
+    /*
+     * Tir au hazard jusqu'a ce qu'il touche une nouvelle case et met a jour le tour courant
+     * @return le tour courant mis a jour
+     * @see ca.uqam.navale.application.PartieControleur#getAttaqueAdversaire()
+     */
     public Tour getAttaqueAdversaire() {
-        // à compléter
-        return null;
-    }  
-    public Tour getTourPrecedent() {
-        // à compléter
-        return null;
+    	String messageAttaque = "deja attaquer";
+    	Case caseTemporaire=new Case((int) (Math.random()* 10), (int) (Math.random()* 10));
+    	
+    	while(messageAttaque=="deja attaquer"){
+    		caseTemporaire.set_i((int) (Math.random()* 10));
+        	caseTemporaire.set_j((int) (Math.random()* 10));
+        	messageAttaque=this.flotteJoueur.attaquer(caseTemporaire);
+    	}
+    	
+    	this.tours.getElement(this.tourIter.courant().setChampsJoueur(caseTemporaire,messageAttaque));        
+        return this.tourIter.courant();
     }
-    public Tour getTourSuivant() {
-        // à compléter
-        return null;
+    
+   /* Retourne le tour precedent
+    * @return le tour precedent
+    * @see ca.uqam.navale.application.PartieControleur#getTourPrecedent()
+    */
+    public Tour getTourPrecedent() {           	
+        return this.tourIter.precedent();
     }
-    public void miseAJourRecords(String nom) {
-        // à compléter
+    
+    /*Retourne le tour suivant
+    * @return le tour suivant
+     * @see ca.uqam.navale.application.PartieControleur#getTourSuivant()
+     */
+    public Tour getTourSuivant() {        
+        return this.tourIter.suivant();
+    }
+    
+    /* Met a jour le document de record
+     * @param nom Le nom du detenteur du nouveau record
+     * @param temps Le temps obtenu
+     * @see ca.uqam.navale.application.PartieControleur#miseAJourRecords(java.lang.String, int)
+     */
+    public void miseAJourRecords(String nom, int temps) {
+    	this.recordDebutantCourant.setNomRecordDebutant(nom);
+    	this.recordDebutantCourant.setTempsRecordDebutant(temps);
+    	EntreeSortieFichier.ecrireRecords(this.recordDebutantCourant);        
     }
 }
