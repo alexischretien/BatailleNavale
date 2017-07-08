@@ -16,14 +16,14 @@ public class EcouteurFenetreNavale implements ActionListener {
         
         Object source = evt.getSource();
 
-        if (source == fenetre.boutonPartie) {        
+        if (source == fenetre.boutonPartie) {
             System.out.println("Demande de jouer partie");
-        }
+        } 
         else if (source == fenetre.boutonRecharger) {
-           System.out.println("Demande de recharge de partie");
+            System.out.println("Demande de recharge de partie");
         }
         else if (source == fenetre.boutonRecords) {
-           System.out.println("Demande Records");
+            System.out.println("Demande Records");
         }
         else if (source == fenetre.boutonFermer) {
             fenetre.dispose();

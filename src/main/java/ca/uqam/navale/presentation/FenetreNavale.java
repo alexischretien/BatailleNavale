@@ -12,30 +12,22 @@ public class FenetreNavale extends JFrame {
 
     private EcouteurFenetreNavale ecouteur;
 
-    JPanel panneauEntete;
-    GridLayout gridPanneauEntete = new GridLayout(2, 2);
-
-    JPanel panneauBoutons;
-    GridLayout gridPanneauBoutons = new GridLayout(1, 2);
+    JRadioButton boutonRadioDebutant;
+    JRadioButton boutonRadioAvance;
     JButton boutonPartie;
     JButton boutonRecharger;
     JButton boutonRecords;
     JButton boutonFermer;
-
+    
     public FenetreNavale() {
         ecouteur = new EcouteurFenetreNavale(this);
-        init();
+        initFenetreMenu();
     }
 
     public void activerSauvegarde(boolean b) {
 
     // à compléter
 
-    }
-
-    public void initFenetreMenu() {
-    
-    // à compléter
     }
 
     public void initFenetreAttente() {
@@ -72,32 +64,47 @@ public class FenetreNavale extends JFrame {
 
     // à compléter
     }
-    private void init() {
+    private void initFenetreMenu() {
 
-        setTitle("Bataille Navale");
-        setBounds(500, 230, 500, 300);
-        setLayout(new GridLayout(2,1));
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel panneauBoutons = new JPanel();
+        GridLayout gridPanneauBoutons = new GridLayout(1, 5);   
 
-        // création du panneau de l'entete
-        panneauEntete = new JPanel();
-        panneauEntete.setLayout(gridPanneauEntete);
+        JPanel panneauBoutonsRadio = new JPanel();
+        GridLayout gridPanneauBoutonsRadio = new GridLayout(1, 2);
 
-        // création du panneau des boutons
-        panneauBoutons = new JPanel();
-        panneauBoutons.setLayout(gridPanneauBoutons);
-        
+        ButtonGroup boutonsRadio = new ButtonGroup();
+
+        boutonRadioDebutant = new JRadioButton("Débutant");
+        boutonRadioAvance   = new JRadioButton("Avancé");
+
         boutonPartie    = new JButton("Nouvelle partie");
         boutonRecharger = new JButton("Recharger une partie");
         boutonRecords   = new JButton("Meilleurs temps");
         boutonFermer    = new JButton("Fermer");
 
+        setTitle("Bataille Navale");
+        setBounds(400, 200, 1024, 720);
+        setLayout(new GridLayout(2,1));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        panneauBoutons.setLayout(gridPanneauBoutons);
+ 
+        boutonRadioDebutant.setSelected(true);
+       
+        boutonsRadio.add(boutonRadioDebutant);
+        boutonsRadio.add(boutonRadioAvance);
+
+        panneauBoutonsRadio.add(boutonRadioDebutant);
+        panneauBoutonsRadio.add(boutonRadioAvance);
+
         panneauBoutons.add(boutonPartie);
+        panneauBoutons.add(panneauBoutonsRadio);
         panneauBoutons.add(boutonRecharger);
         panneauBoutons.add(boutonRecords);
         panneauBoutons.add(boutonFermer);
-       
-        add(panneauEntete);
-        add(panneauBoutons);
+
+        add(panneauBoutons, BorderLayout.SOUTH);
+        pack(); 
+
     }
 }
