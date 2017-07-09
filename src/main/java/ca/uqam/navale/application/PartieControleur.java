@@ -9,6 +9,7 @@ import java.lang.String;
 public interface PartieControleur {
 
     public void init();
+    public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId);
     public Tour initFlottes(List<List<Case>> flotte);
     public Tour attaquerAdversaire(Case c); 
     public Tour getAttaqueAdversaire();

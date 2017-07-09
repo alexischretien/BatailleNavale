@@ -9,15 +9,15 @@ import ca.uqam.navale.fondation.*;
 
 public class PartieDebutantControleur implements PartieControleur {
  
-    Flotte flotteJoueur;
-    Flotte flotteAdversaire;
-    LocalDateTime heureDebut;
-    LocalDateTime heureFin;
-    int nbSecondesPartie;
-    boolean joueurCommence;
-    TourListe tours;
-    TourIterateur tourIter;
-    Records recordDebutantCourant;
+    private Flotte flotteJoueur;
+    private Flotte flotteAdversaire;
+    private LocalDateTime heureDebut;
+    private LocalDateTime heureFin;
+    private int nbSecondesPartie;
+    private boolean joueurCommence;
+    private TourListe tours;
+    private TourIterateur tourIter;
+    private Records records;
 
     public PartieDebutantControleur() {
     	init();
@@ -26,8 +26,18 @@ public class PartieDebutantControleur implements PartieControleur {
         // à compléter
     }
     public void init() {
-    	this.joueurCommence= Math.random()< 0.5;    	
-        // à compléter
+        flotteJoueur = new Flotte();
+        flotteAdversaire = new Flotte();
+        tours = new TourListe();
+        tourIter = tours.creerIterateur();
+    	joueurCommence= Math.random()< 0.5;    	
+        
+    }
+    public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
+
+        return flotteJoueur.positionnerNavire(i, j, horizontal, navireId);
+
+       
     }
     public Tour initFlottes(List<List<Case>> flotte) {
     	
@@ -88,8 +98,8 @@ public class PartieDebutantControleur implements PartieControleur {
      * @see ca.uqam.navale.application.PartieControleur#miseAJourRecords(java.lang.String, int)
      */
     public void miseAJourRecords(String nom, int temps) {
-    	this.recordDebutantCourant.setNomRecordDebutant(nom);
-    	this.recordDebutantCourant.setTempsRecordDebutant(temps);
-    	EntreeSortieFichier.ecrireRecords(this.recordDebutantCourant);        
+    	records.setNomRecordDebutant(nom);
+    	records.setTempsRecordDebutant(temps);
+    	EntreeSortieFichier.ecrireRecords(records);        
     }
 }
