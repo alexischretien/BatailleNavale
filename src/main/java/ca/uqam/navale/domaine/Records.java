@@ -12,8 +12,14 @@ public class Records {
     int tempsRecordAvance;
 
 
-    public Records() {
-        // à compléter
+    public Records(String nomRecordJoueur, String nomRecordDebutant, String nomRecordAvance,
+                   int tempsRecordJoueur, int tempsRecordDebutant, int tempsRecordAvance) {
+        this.nomRecordJoueur = nomRecordJoueur;
+        this.nomRecordDebutant = nomRecordDebutant;
+        this.nomRecordAvance = nomRecordAvance;
+        this.tempsRecordJoueur = tempsRecordJoueur;
+        this.tempsRecordDebutant = tempsRecordDebutant;
+        this.tempsRecordAvance = tempsRecordAvance;
     } 
 
     public String getNomRecordJoueur() {

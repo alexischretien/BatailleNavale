@@ -1,12 +1,12 @@
 package ca.uqam.navale.application; 
 
+import java.io.*;
 import java.util.*;
-import java.lang.String;
 import java.time.LocalDateTime;
  
 import ca.uqam.navale.domaine.*;
 import ca.uqam.navale.fondation.*;
-
+import org.json.simple.parser.ParseException;
  
 public class PartieAvanceControleur implements PartieControleur {
  
@@ -14,11 +14,9 @@ public class PartieAvanceControleur implements PartieControleur {
     Flotte flotteAdversaire;
     LocalDateTime heureDebut;
     LocalDateTime heureFin;
-    int nbSecondesPartie;
     boolean joueurCommence;
     TourListe tours;
     TourIterateur tourIter;
-    Records recordAvanceCourant;
 
     public PartieAvanceControleur() {
     	init();
@@ -28,7 +26,7 @@ public class PartieAvanceControleur implements PartieControleur {
     	this.joueurCommence= Math.random()< 0.5;
         // à compléter
     }
-    public Tour initFlottes(List<List<Case>> flotte) {
+    public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
         // à compléter
         return null;
     }
@@ -71,10 +69,12 @@ public class PartieAvanceControleur implements PartieControleur {
       * @param temps Le temps obtenu
       * @see ca.uqam.navale.application.PartieControleur#miseAJourRecords(java.lang.String, int)
       */
-     public void miseAJourRecords(String nom, int temps) {
-     	this.recordAvanceCourant.setNomRecordAvance(nom);
-     	this.recordAvanceCourant.setTempsRecordAvance(temps);
-     	EntreeSortieFichier.ecrireRecords(this.recordAvanceCourant);        
+     public void miseAJourRecords(String nom, int temps) throws IOException, ParseException {
+         Records r = EntreeSortieFichier.recupererRecords();
+         r.setNomRecordAvance(nom);
+         r.setTempsRecordAvance(temps);
+         EntreeSortieFichier.ecrireRecords(r);
+      
      }
 }
 

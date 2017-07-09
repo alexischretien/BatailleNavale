@@ -1,11 +1,12 @@
 package ca.uqam.navale.application;
 
+import java.io.*;
 import java.util.*;
-import java.lang.String;
 import java.time.LocalDateTime;
 
 import ca.uqam.navale.domaine.*;
 import ca.uqam.navale.fondation.*;
+import org.json.simple.parser.ParseException;
 
 public class PartieDebutantControleur implements PartieControleur {
  
@@ -13,11 +14,9 @@ public class PartieDebutantControleur implements PartieControleur {
     private Flotte flotteAdversaire;
     private LocalDateTime heureDebut;
     private LocalDateTime heureFin;
-    private int nbSecondesPartie;
     private boolean joueurCommence;
     private TourListe tours;
     private TourIterateur tourIter;
-    private Records records;
 
     public PartieDebutantControleur() {
     	init();
@@ -38,11 +37,6 @@ public class PartieDebutantControleur implements PartieControleur {
         return flotteJoueur.positionnerNavire(i, j, horizontal, navireId);
 
        
-    }
-    public Tour initFlottes(List<List<Case>> flotte) {
-    	
-        // à compléter
-        return null;
     }
     
     /* Attaque une case adverse et retourne le resultat
@@ -97,9 +91,11 @@ public class PartieDebutantControleur implements PartieControleur {
      * @param temps Le temps obtenu
      * @see ca.uqam.navale.application.PartieControleur#miseAJourRecords(java.lang.String, int)
      */
-    public void miseAJourRecords(String nom, int temps) {
-    	records.setNomRecordDebutant(nom);
-    	records.setTempsRecordDebutant(temps);
-    	EntreeSortieFichier.ecrireRecords(records);        
+    public void miseAJourRecords(String nom, int temps) throws IOException, ParseException  {
+        Records r = EntreeSortieFichier.recupererRecords();
+        r.setNomRecordDebutant(nom);
+        r.setTempsRecordDebutant(temps);
+        EntreeSortieFichier.ecrireRecords(r);  
+        
     }
 }

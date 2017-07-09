@@ -82,7 +82,37 @@ public class Flotte {
     }
 
     public String attaquer(Case c) {
-        // à compléter
-        return null;
+           
+         List<List<Case>> listeNavires = getListeNavires();
+
+         for (List<Case> navire : listeNavires) {
+             for (int i = 0; i < navire.size(); i++) {
+                 if (c == navire.get(i)) {
+                     navire.remove(i);
+                     if (navire.isEmpty()) {
+                         listeNavires.remove(navire);
+                         if (listeNavires.isEmpty()) {
+                             return "partie terminee";
+                         }
+                         else{
+                             return "coule"; 
+                         }
+                     }
+                     return "touche";
+                 }
+             }
+        }
+        return "dans l'eau";
+    }
+
+    private List<List<Case>> getListeNavires() {
+    
+        List<List<Case>> l = new ArrayList<List<Case>>();
+        l.add(porte_avion);
+        l.add(croiseur);
+        l.add(contre_torpilleurs);
+        l.add(sous_marin);
+        l.add(torpilleur);
+        return l;
     }
 }

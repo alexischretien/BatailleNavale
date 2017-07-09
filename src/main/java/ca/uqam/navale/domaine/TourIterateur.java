@@ -7,15 +7,26 @@ public class TourIterateur implements Iterateur {
     TourListe tours;
 
     public Tour precedent() {
-        // à compléter
-        return null;
+
+        if(0 > index-1){
+            return  tours.getElement(0);
+        }
+        else {
+            return tours.getElement(index-1);
+        }
     }
     public Tour suivant() {
-        // à compléter
-        return null;
+
+        if(tours.size()-1 < index+1){
+            return  tours.getElement(tours.size()-1);
+        }
+        else {
+            return tours.getElement(index+1);
+        }
     }
+
     public Tour courant() {
-        // à compléter
-        return null;
+          
+        return tours.getElement(tours.size()-1);
     }
 }
