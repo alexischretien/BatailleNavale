@@ -23,4 +23,11 @@ public class Case {
     public void set_j(int j) {
         this.j = j;
     }
+    
+    public boolean equals(Case c) {
+        if (i == c.i && j == c.j) {
+            return true;
+        }
+        return false;
+    }
 }

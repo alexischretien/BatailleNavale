@@ -9,7 +9,7 @@ import org.json.simple.parser.ParseException;
 
 public interface PartieControleur {
 
-    public void init();
+    public boolean init();
     public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId);
     public Tour attaquerAdversaire(Case c); 
     public Tour getAttaqueAdversaire();

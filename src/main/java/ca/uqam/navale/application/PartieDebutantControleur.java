@@ -19,36 +19,50 @@ public class PartieDebutantControleur implements PartieControleur {
     private TourIterateur tourIter;
 
     public PartieDebutantControleur() {
-    	init();
-    	
-    	
-        // à compléter
-    }
-    public void init() {
-        flotteJoueur = new Flotte();
+    	flotteJoueur = new Flotte();
         flotteAdversaire = new Flotte();
         tours = new TourListe();
         tourIter = tours.creerIterateur();
-    	joueurCommence= Math.random()< 0.5;    	
-        
+    }
+    public boolean init() {
+    
+        joueurCommence = Math.random() < 0.5;
+        flotteAdversaire = Flotte.genererFlotteAleatoire();
+        tours.ajouter(new Tour(flotteJoueur, flotteAdversaire));  
+        System.out.println("ajout du premier tour OK");      
+        heureDebut = LocalDateTime.now();
+
+        return joueurCommence;
     }
     public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
 
-        return flotteJoueur.positionnerNavire(i, j, horizontal, navireId);
-
-       
+        return flotteJoueur.positionnerNavire(i, j, horizontal, navireId);       
     }
-    
+   
     /* Attaque une case adverse et retourne le resultat
      * @param la case adverse cible
      * @return le tour courant mis a jour
      * @see ca.uqam.navale.application.PartieControleur#attaquerAdversaire(ca.uqam.navale.domaine.Case)
      */
     public Tour attaquerAdversaire(Case c) {
-    	String messageAttaque = this.flotteAdversaire.attaquer(c);    	
-    	
-    	this.tours.getElement(this.tourIter.courant().setChampsAdversaire(c,messageAttaque));        
-        return this.tourIter.courant();
+        Tour tour;
+    	String messageAttaque;
+
+        messageAttaque = flotteAdversaire.attaquer(c);    	
+    	tour = new Tour(tours.getDernier());
+      
+        tour.setEvenement(messageAttaque);
+
+        if (messageAttaque == "touché" || messageAttaque == "coulé" ||
+                messageAttaque == "partie terminée") {
+            tour.getChampAdversaire()[c.get_i()][c.get_j()] = 't';
+        }
+        else if (messageAttaque == "dans l'eau") {
+            tour.getChampAdversaire()[c.get_i()][c.get_j()] = 'd';
+        }
+        tours.ajouter(tour);
+        return tour;
+
     }
    
     /*
@@ -57,17 +71,29 @@ public class PartieDebutantControleur implements PartieControleur {
      * @see ca.uqam.navale.application.PartieControleur#getAttaqueAdversaire()
      */
     public Tour getAttaqueAdversaire() {
-    	String messageAttaque = "deja attaquer";
-    	Case caseTemporaire=new Case((int) (Math.random()* 10), (int) (Math.random()* 10));
+
+        Case c;
+        Tour tour;
+    	String messageAttaque;
+
+        do {
+             c = new Case((int) (Math.random()* 10), (int) (Math.random()* 10));
+             messageAttaque = flotteJoueur.attaquer(c);
+
+    	} while(messageAttaque=="déjà attaquée");
     	
-    	while(messageAttaque=="deja attaquer"){
-    		caseTemporaire.set_i((int) (Math.random()* 10));
-        	caseTemporaire.set_j((int) (Math.random()* 10));
-        	messageAttaque=this.flotteJoueur.attaquer(caseTemporaire);
-    	}
-    	
-    	this.tours.getElement(this.tourIter.courant().setChampsJoueur(caseTemporaire,messageAttaque));        
-        return this.tourIter.courant();
+        tour = new Tour(tours.getDernier());
+        tour.setEvenement(messageAttaque);
+
+        if (messageAttaque == "touché" || messageAttaque == "coulé" ||
+                messageAttaque == "partie terminée") {
+            tour.getChampJoueur()[c.get_i()][c.get_j()] = 't';
+        }
+        else if (messageAttaque == "dans l'eau") {
+            tour.getChampJoueur()[c.get_i()][c.get_j()] = 'd';
+        }
+        tours.ajouter(tour);
+    	return tour;
     }
     
    /* Retourne le tour precedent

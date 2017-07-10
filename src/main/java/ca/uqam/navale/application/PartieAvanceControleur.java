@@ -19,11 +19,11 @@ public class PartieAvanceControleur implements PartieControleur {
     TourIterateur tourIter;
 
     public PartieAvanceControleur() {
-    	init();
+ 
         // à compléter
     }
-    public void init() {
-    	this.joueurCommence= Math.random()< 0.5;
+    public boolean init() {
+    	return false;
         // à compléter
     }
     public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {

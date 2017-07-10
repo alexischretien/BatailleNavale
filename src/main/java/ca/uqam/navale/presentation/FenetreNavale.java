@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.*;
+import javax.swing.border.*;
 
 import ca.uqam.navale.domaine.Case;
 import ca.uqam.navale.domaine.Tour;
@@ -13,10 +14,20 @@ import ca.uqam.navale.domaine.Records;
 
 public class FenetreNavale extends JFrame {
 
+    private static final Color BLEU        = new Color(0, 0, 230);
+    private static final Color BLEU_FONCE  = new Color(0, 0, 102);
+    private static final Color ROUGE       = new Color(230, 0, 0);
+    private static final Color ROUGE_FONCE = new Color(102, 0, 0);
+    private static final Color GRIS        = new Color(102, 102, 153);
+    private static final Color GRIS_FONCE  = new Color(41, 41, 61);
+
     private EcouteurFenetreNavale ecouteur;
 
     GridLayout gridPanneauBoutons;
     JPanel panneauBoutons;
+    JPanel panneauGrilleJoueur;
+    JPanel panneauGrilleAdversaire;
+    JPanel panneauEvenement;
     JRadioButton boutonRadioDebutant;
     JRadioButton boutonRadioAvance;
     JButton boutonPartie;
@@ -27,6 +38,8 @@ public class FenetreNavale extends JFrame {
     JButton boutonTourSuivant;
     JButton boutonMenu;
     JButton boutonFermer;
+    JButton boutonSauvegarde;
+    JButton boutonVisualisation;
     JRadioButton boutonHor;
     JRadioButton boutonVer;
     JRadioButton boutonPorteAvion;
@@ -34,8 +47,10 @@ public class FenetreNavale extends JFrame {
     JRadioButton boutonContreTorpilleurs;
     JRadioButton boutonSousMarin;
     JRadioButton boutonTorpilleur;
-    JButton grilleJoueur[][] = new JButton[10][10]; 
-   
+    JButton grilleJoueur[][];
+    JButton grilleAdversaire[][];
+    JTextArea messageEvenement;
+
     public FenetreNavale() {
 
         ecouteur = new EcouteurFenetreNavale(this);
@@ -48,10 +63,15 @@ public class FenetreNavale extends JFrame {
         boutonRecords   = new JButton("Meilleurs temps");
         boutonJouer     = new JButton("Jouer");
         boutonFermer    = new JButton("Fermer");
+        boutonSauvegarde = new JButton("Sauvegarder");
+        boutonVisualisation = new JButton("Visualiser la partie");
         boutonTourPrecedent = new JButton("Tour précédent");
         boutonTourSuivant   = new JButton("Tour suivant");
         boutonMenu = new JButton("Retour au menu");
-
+        grilleJoueur = new JButton[10][10];
+        grilleAdversaire = new JButton[10][10];  
+        messageEvenement = new JTextArea();
+   
         boutonRadioDebutant.addActionListener(ecouteur);
         boutonRadioAvance.addActionListener(ecouteur);
 
@@ -60,6 +80,8 @@ public class FenetreNavale extends JFrame {
         boutonRecords.addActionListener(ecouteur);
         boutonJouer.addActionListener(ecouteur);
         boutonFermer.addActionListener(ecouteur);
+        boutonSauvegarde.addActionListener(ecouteur);
+        boutonVisualisation.addActionListener(ecouteur);
         boutonTourPrecedent.addActionListener(ecouteur);
         boutonTourSuivant.addActionListener(ecouteur);
         boutonMenu.addActionListener(ecouteur);
@@ -80,14 +102,13 @@ public class FenetreNavale extends JFrame {
 
     public void initFenetreAttente() {
 
-    // à compléter
+    // Pas à implémenter pour l'instant, ne sert que pour les parties en ligne.
     }
 
     public void initFenetrePlacementNavires() {
     
         getContentPane().removeAll();
 
-        
         ButtonGroup boutonsNavires = new ButtonGroup();
         ButtonGroup boutonsOrientation = new ButtonGroup();
 
@@ -114,56 +135,108 @@ public class FenetreNavale extends JFrame {
         boutonsOrientation.add(boutonVer);
 
         panneauBoutons = new JPanel();
-        panneauBoutons.setLayout(new GridLayout(1, 2));        
-
+        panneauBoutons.setLayout(new GridLayout(1, 1));        
+        
+        JTextArea message = new JTextArea(
+                        "Veuillez placer les 5 navires sur la grille.\n Les navires ne peuvent " +
+                        "se chevaucher.\nLa case sélectionnée pour le placement sera la case\nla " +
+                        "plus au nord ou la plus à l'ouest dépendamment\nde l'orientation du navire.");
+        message.setEditable(false);
+ 
+        JPanel panneauTexte = new JPanel();
+        panneauTexte.setLayout(new GridLayout(1,1));
+        panneauTexte.add(message);
 
         JPanel panneauOrientation = new JPanel();
-        panneauOrientation.setLayout(new GridLayout(3, 1));
-
-        panneauOrientation.add(new JLabel("Orientation"));
+        panneauOrientation.setLayout(new GridLayout(2, 1));
+        panneauOrientation.setBorder(new TitledBorder("Orientation"));
+ 
         panneauOrientation.add(boutonHor);
         panneauOrientation.add(boutonVer);
  
         JPanel panneauNavires = new JPanel();
-        panneauNavires.setLayout(new GridLayout(6, 1));
+        panneauNavires.setLayout(new GridLayout(5, 1));
+        panneauNavires.setBorder(new TitledBorder("Navires"));
 
-        panneauNavires.add(new JLabel("Navires"));
         panneauNavires.add(boutonPorteAvion);
         panneauNavires.add(boutonCroiseur);
         panneauNavires.add(boutonContreTorpilleurs);
         panneauNavires.add(boutonSousMarin);
         panneauNavires.add(boutonTorpilleur);
-        
+
+        JPanel panneauRadio = new JPanel();
+        panneauRadio.setLayout(new GridLayout(1,2)); 
+
+        panneauRadio.add(panneauNavires);
+        panneauRadio.add(panneauOrientation);
+       
         boutonJouer.setEnabled(false);
 
         panneauBoutons.add(boutonJouer);
         panneauBoutons.add(boutonMenu);
          
-        JPanel panneauGrilleJoueur = new JPanel();
+        panneauGrilleJoueur = new JPanel();
         panneauGrilleJoueur.setLayout(new GridLayout(10, 10));
-
+        panneauGrilleJoueur.setBorder(new TitledBorder("Votre grille"));
         
         for (int i = 0 ; i < 10 ; ++i) {
             for (int j = 0 ; j < 10 ; ++j) {
-             //   System.out.println("i = " + i + ", j = " + j);
                 grilleJoueur[i][j] = new JButton();
-                grilleJoueur[i][j].setBackground(Color.blue);
+                grilleJoueur[i][j].setBackground(BLEU);
                 grilleJoueur[i][j].setPreferredSize(new Dimension(30,30));
                 grilleJoueur[i][j].addActionListener(ecouteur);
                 panneauGrilleJoueur.add(grilleJoueur[i][j]);
             }
         }
         setLayout(new GridLayout(2, 2));
-        add(panneauNavires);
-        add(panneauOrientation); 
+        add(panneauTexte);
+        add(panneauRadio);
         add(panneauGrilleJoueur);
-        add(panneauBoutons, BorderLayout.SOUTH);
+        add(panneauBoutons);
         pack();
     }
 
-    public void initFenetrePartie(Tour tour, boolean auTourDuJoueur) {
+    public void initFenetrePartie(boolean joueurCommence) {
+           
+        getContentPane().removeAll();
+       
+        panneauGrilleAdversaire = new JPanel();
+        panneauGrilleAdversaire.setLayout(new GridLayout(10, 10));
+        panneauGrilleAdversaire.setBorder(new TitledBorder("Grille de l'adversaire"));
+
+        for(int i = 0 ; i < 10 ; ++i) {
+            for (int j = 0 ; j < 10 ; ++j) {
+                grilleJoueur[i][j].setEnabled(false);
+                grilleJoueur[i][j].removeActionListener(ecouteur);
+                grilleAdversaire[i][j] = new JButton();
+                grilleAdversaire[i][j].setBackground(ROUGE);
+                grilleAdversaire[i][j].setPreferredSize(new Dimension(30,30));
+                grilleAdversaire[i][j].addActionListener(ecouteur);
+                grilleAdversaire[i][j].setEnabled(joueurCommence);               
+                
+                panneauGrilleAdversaire.add(grilleAdversaire[i][j]);
+            }
+        }
+        panneauBoutons = new JPanel();
+        panneauBoutons.setLayout(new GridLayout(1, 3));
+        
+        panneauBoutons.add(boutonSauvegarde);
+        panneauBoutons.add(boutonMenu);
+        panneauBoutons.add(boutonVisualisation);
+        
+        boutonVisualisation.setEnabled(false);
     
-    // à compléter
+        panneauEvenement = new JPanel();
+        panneauEvenement.setLayout(new GridLayout(1,1));
+        panneauEvenement.setBorder(new TitledBorder("Événement"));
+        panneauEvenement.add(messageEvenement);
+
+        setLayout(new GridLayout(2,2));
+        add(panneauGrilleJoueur);
+        add(panneauGrilleAdversaire);
+        add(panneauBoutons);
+        add(panneauEvenement);
+        pack();
     }
 
     public void initFenetreFinPartie(Tour tour, boolean gagne) {
@@ -215,19 +288,48 @@ public class FenetreNavale extends JFrame {
 
         add(panneauBoutons, BorderLayout.SOUTH);
         pack(); 
-
     }
     
     public void miseAJourPlacementsNavires(List<Case> casesOccupees) {
 
         for (int i = 0 ; i < 10 ; ++i) {
             for (int j = 0 ; j < 10 ; ++j) {
-                System.out.println(i + " " + j);
                 grilleJoueur[i][j].setBackground(Color.blue);
             }
         }
         for (Case c : casesOccupees) {
-            grilleJoueur[c.get_i()][c.get_j()].setBackground(Color.gray);
+            grilleJoueur[c.get_i()][c.get_j()].setBackground(GRIS);
+        }
+
+        boutonJouer.setEnabled(casesOccupees.size() == 17);
+    }
+
+    public void miseAJourPartie(Tour tour, boolean auTourDuJoueur) {
+        
+        for (int i = 0 ; i < 10 ; ++i) {
+            for (int j = 0 ; j < 10 ; ++j) {
+                
+                grilleAdversaire[i][j].setEnabled(auTourDuJoueur); 
+                
+                if (tour.getChampJoueur()[i][j] == 'd') {
+                    grilleJoueur[i][j].setBackground(BLEU_FONCE);
+                }
+                else if (tour.getChampJoueur()[i][j] == 't') {
+                    grilleJoueur[i][j].setBackground(GRIS_FONCE);
+                }
+
+                if (tour.getChampAdversaire()[i][j] == 'd') {
+                    grilleAdversaire[i][j].setBackground(ROUGE_FONCE);
+                    grilleAdversaire[i][j].setEnabled(false);
+                }
+                else if (tour.getChampAdversaire()[i][j] == 't') {
+                    grilleAdversaire[i][j].setBackground(GRIS_FONCE);
+                    grilleAdversaire[i][j].setEnabled(false);
+                }
+            }
+        }
+        if (!auTourDuJoueur) {
+            messageEvenement.setText(tour.getEvenement());
         }
     }
 
