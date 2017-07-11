@@ -5,6 +5,7 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.awt.event.*;
+import javax.xml.bind.JAXBException;
 import javax.swing.JOptionPane;
 import ca.uqam.navale.application.*;
 import ca.uqam.navale.domaine.Case;
@@ -44,6 +45,9 @@ public class EcouteurFenetreNavale implements ActionListener {
                 JOptionPane.showMessageDialog(fenetre, "Partie sauvegardée");
             } 
             catch (IOException e) {
+                Logger.getLogger(EntreeSortieFichier.class.getName()).log(Level.SEVERE, null, e);
+            }
+            catch (JAXBException e) {
                 Logger.getLogger(EntreeSortieFichier.class.getName()).log(Level.SEVERE, null, e);
             }
         }
@@ -104,19 +108,21 @@ public class EcouteurFenetreNavale implements ActionListener {
                             fenetre.miseAJourPartie(tour, !tour.partieEstTerminee());
                         }
                         else if (tour.getEvenement() == "Nouveau record") {
-                            String nom = JOptionPane.showInputDialog(fenetre, 
+                            String nom = JOptionPane.showInputDialog(fenetre,
                                                  "Vous avez battu le meilleur temps!\n " +
                                                  "Veuillez entrer votre nom.", null);
-                            try {
-                                partieControleur.miseAJourRecords(nom);
-                            }
-                            catch(IOException e) {
-                                Logger.getLogger(EntreeSortieFichier.class.getName())
+                            if (nom != null) {
+                                try {
+                                    partieControleur.miseAJourRecords(nom);
+                                }
+                                catch(IOException e) {
+                                    Logger.getLogger(EntreeSortieFichier.class.getName())
                                                           .log(Level.SEVERE, null, e);
-                            }
-                            catch(ParseException e) {
-                                Logger.getLogger(EntreeSortieFichier.class.getName())
+                                }
+                                catch(ParseException e) {
+                                    Logger.getLogger(EntreeSortieFichier.class.getName())
                                                           .log(Level.SEVERE, null, e);
+                                }
                             }
                         }
                         return;
