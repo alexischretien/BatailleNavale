@@ -14,12 +14,18 @@ import ca.uqam.navale.domaine.Records;
 
 public class FenetreNavale extends JFrame {
 
+    private static final int   NAVIRE_INVALIDE_ID    = -1;
+    private static final int   PORTE_AVION_ID        =  0;
+    private static final int   CROISEUR_ID           =  1;
+    private static final int   CONTRE_TORPILLEURS_ID =  2;
+    private static final int   SOUS_MARIN_ID         =  3; 
+    private static final int   TORPILLEUR_ID         =  4;
     private static final Color BLEU        = new Color(0, 0, 230);
     private static final Color BLEU_FONCE  = new Color(0, 0, 102);
     private static final Color ROUGE       = new Color(230, 0, 0);
     private static final Color ROUGE_FONCE = new Color(102, 0, 0);
-    private static final Color GRIS        = new Color(102, 102, 153);
-    private static final Color GRIS_FONCE  = new Color(41, 41, 61);
+    private static final Color GRIS        = new Color(220, 220, 220);
+    private static final Color GRIS_FONCE  = new Color(128, 128, 128);
 
     private EcouteurFenetreNavale ecouteur;
 
@@ -230,6 +236,7 @@ public class FenetreNavale extends JFrame {
         panneauEvenement.setLayout(new GridLayout(1,1));
         panneauEvenement.setBorder(new TitledBorder("Événement"));
         panneauEvenement.add(messageEvenement);
+        messageEvenement.setEditable(false);
 
         setLayout(new GridLayout(2,2));
         add(panneauGrilleJoueur);
@@ -239,19 +246,30 @@ public class FenetreNavale extends JFrame {
         pack();
     }
 
-    public void initFenetreFinPartie(Tour tour, boolean gagne) {
-        
-    // à compléter
-    }
-
-    public void initFenetreEntrerNom() {
-
-    // à compléter
-    }
 
     public void initFenetreRecords(Records records) {
 
-    // à compléter
+    getContentPane().removeAll();
+
+    JPanel panneauRecords = new JPanel();
+    panneauRecords.setBorder(new TitledBorder("Meilleurs temps")); 
+    JTextArea messageRecords = new JTextArea();
+    messageRecords.setText("Partie en ligne:\n" +
+                           "     Joueur: " + records.getNomRecordJoueur()    +  "\n" +
+                           "     Temps:  " + records.getTempsRecordJoueur() + "s\n" +
+                           "Partie niveau débutant:\n" +
+                           "     Joueur: " + records.getNomRecordDebutant()   +  "\n" +
+                           "     Temps:  " + records.getTempsRecordDebutant() + "s\n" +
+                           "Partie niveau avancé:\n" +
+                           "     Joueur: " + records.getNomRecordAvance()   + "\n" +
+                           "     Temps:  " + records.getTempsRecordAvance() + "s");
+    messageRecords.setEditable(false); 
+    panneauRecords.add(messageRecords);
+
+    setLayout(new GridLayout(2, 1));
+    add(panneauRecords);
+    add(boutonMenu);
+    pack();
     }
 
     public void initFenetreVisualisationTour(Tour tour) {
@@ -305,31 +323,40 @@ public class FenetreNavale extends JFrame {
     }
 
     public void miseAJourPartie(Tour tour, boolean auTourDuJoueur) {
-        
+
         for (int i = 0 ; i < 10 ; ++i) {
             for (int j = 0 ; j < 10 ; ++j) {
-                
+                              
                 grilleAdversaire[i][j].setEnabled(auTourDuJoueur); 
                 
-                if (tour.getChampJoueur()[i][j] == 'd') {
+                if (tour.getChampJoueur(i, j) == 'd') {
                     grilleJoueur[i][j].setBackground(BLEU_FONCE);
                 }
-                else if (tour.getChampJoueur()[i][j] == 't') {
+                else if (tour.getChampJoueur(i, j) == 't') {
                     grilleJoueur[i][j].setBackground(GRIS_FONCE);
                 }
 
-                if (tour.getChampAdversaire()[i][j] == 'd') {
+                if (tour.getChampAdversaire(i, j) == 'd') {
                     grilleAdversaire[i][j].setBackground(ROUGE_FONCE);
                     grilleAdversaire[i][j].setEnabled(false);
                 }
-                else if (tour.getChampAdversaire()[i][j] == 't') {
+                else if (tour.getChampAdversaire(i, j) == 't') {
                     grilleAdversaire[i][j].setBackground(GRIS_FONCE);
                     grilleAdversaire[i][j].setEnabled(false);
                 }
             }
         }
-        if (!auTourDuJoueur) {
+        if (tour.partieEstTerminee()) {
             messageEvenement.setText(tour.getEvenement());
+            boutonSauvegarde.setEnabled(false);
+            boutonVisualisation.setEnabled(true);
+        }                                  
+        else {
+            boutonSauvegarde.setEnabled(true);
+        
+            if (!auTourDuJoueur) {
+                messageEvenement.setText(tour.getEvenement());
+            }
         }
     }
 
@@ -340,11 +367,11 @@ public class FenetreNavale extends JFrame {
 
     public int getNavireId() {
         
-        if (boutonPorteAvion.isSelected()) return 0;
-        if (boutonCroiseur.isSelected()) return 1;
-        if (boutonContreTorpilleurs.isSelected()) return 2;
-        if (boutonSousMarin.isSelected()) return 3;
-        if (boutonTorpilleur.isSelected()) return 4;
-        return -1;
+        if (boutonPorteAvion.isSelected())        return PORTE_AVION_ID;
+        if (boutonCroiseur.isSelected())          return CROISEUR_ID;
+        if (boutonContreTorpilleurs.isSelected()) return CONTRE_TORPILLEURS_ID;
+        if (boutonSousMarin.isSelected())         return SOUS_MARIN_ID;
+        if (boutonTorpilleur.isSelected())        return TORPILLEUR_ID;
+        return NAVIRE_INVALIDE_ID;
     }
 }

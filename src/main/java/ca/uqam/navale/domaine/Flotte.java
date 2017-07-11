@@ -1,7 +1,9 @@
 package ca.uqam.navale.domaine;
- 
+
+import javax.xml.bind.annotation.*;
 import java.util.*;
 
+@XmlRootElement
 public class Flotte {
 
     List<Case> porte_avion;
@@ -22,7 +24,6 @@ public class Flotte {
 
     public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
 
-    //    boolean positionnementValide = true;
         int longueur = -1;
         List<Case> navire = new ArrayList<Case>();
         List<Case> casesOccupees = this.getCasesOccupees();
@@ -87,7 +88,7 @@ public class Flotte {
 
          for (Case case_attaquee : cases_attaquees) {
             if (c.equals(case_attaquee)) {
-                return "déjà attaquée"; 
+                return "Déjà attaquée"; 
             }
          }
          cases_attaquees.add(c);
@@ -99,17 +100,17 @@ public class Flotte {
                      if (navire.isEmpty()) {
                          listeNavires.remove(navire);
                          if (listeNavires.isEmpty()) {
-                             return "partie terminée";
+                             return "Partie terminée";
                          }
                          else{
-                             return "coulé"; 
+                             return "Coulé"; 
                          }
                      }
-                     return "touché";
+                     return "Touché";
                  }
              }
         }
-        return "dans l'eau";
+        return "Dans l'eau";
     }
 
     public static Flotte genererFlotteAleatoire() {
@@ -146,36 +147,55 @@ public class Flotte {
     private List<List<Case>> getListeNavires() {
     
         List<List<Case>> l = new ArrayList<List<Case>>();
-        l.add(porte_avion);
-        l.add(croiseur);
-        l.add(contre_torpilleurs);
-        l.add(sous_marin);
-        l.add(torpilleur);
+        if (!porte_avion.isEmpty()) 
+            l.add(porte_avion);
+        if (!croiseur.isEmpty())
+            l.add(croiseur);
+        if (!contre_torpilleurs.isEmpty())
+            l.add(contre_torpilleurs);
+        if (!sous_marin.isEmpty())
+            l.add(sous_marin);
+        if (!torpilleur.isEmpty())
+            l.add(torpilleur);
         return l;
     }
-/*
-    private static List<Case> genererNavireAleatoire(int longueur) {
-        
-        int i;
-        int j;
-        int i_max;
-        int j_max;
-        List<Case> navire = new ArrayList<Case>();
-        boolean horizontal = Math.random() < 0.5;
-        Random rand1 = new Random(); 
-        Random rand2 = new Random();
-        
-        i_max = (horizontal ? 10 : 10 - longueur);
-        j_max = (horizontal ? 10 - longueur : 10);
 
-        i = rand1.nextInt(i_max);
-        j = rand2.nextInt(j_max);
+    // getters
+    public List<Case> getPorte_avion() {
+        return porte_avion;
+    }
+    public List<Case> getCroiseur() {
+        return croiseur;
+    }
+    public List<Case> getContre_torpilleurs() {
+        return contre_torpilleurs;
+    }
+    public List<Case> getSous_marin() {
+        return sous_marin;
+    }
+    public List<Case> getTorpilleur() {
+        return torpilleur;
+    }
 
-        while (longueur > 0) {
-            navire.add(new Case(i, j));
-            if (horizontal) ++j;
-            else            ++i;
-        --longueur;
-        }
-    }*/
+    // setters
+    @XmlElement
+    public void setPorte_avion(List<Case> porte_avion) {
+        this.porte_avion = porte_avion;
+    }
+    @XmlElement
+    public void setCroiseur(List<Case> croiseur) {
+        this.croiseur = croiseur;
+    }
+    @XmlElement
+    public void setContre_torpilleurs(List<Case> contre_torpilleurs) {
+        this.contre_torpilleurs =  contre_torpilleurs;
+    }
+    @XmlElement
+    public void setSous_marin(List<Case> sous_marin) {
+        this.sous_marin = sous_marin;
+    }
+    @XmlElement
+    public void setTorpilleur(List<Case> torpilleur) {
+        this.torpilleur = torpilleur;
+    }
 }

@@ -15,5 +15,5 @@ public interface PartieControleur {
     public Tour getAttaqueAdversaire();
     public Tour getTourPrecedent();
     public Tour getTourSuivant();
-    public void miseAJourRecords(String nom, int temps) throws IOException, ParseException;
+    public void miseAJourRecords(String nom) throws IOException, ParseException;
 }

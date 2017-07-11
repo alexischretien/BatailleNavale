@@ -8,17 +8,26 @@
 
 package ca.uqam.navale.domaine;
 
+import javax.xml.bind.annotation.*;
 import java.util.*;
 
+@XmlRootElement
 public class Tour {
 
-    char[][] champJoueur = new char[10][10];
-    char[][] champAdversaire = new char[10][10];
+    char[][] champJoueur;
+    char[][] champAdversaire;
     String evenement;
        
-
+    public Tour () {
+        champJoueur = new char[10][10];
+        champAdversaire = new char[10][10];
+    }
     public Tour (Flotte flotteInitialeJoueur, Flotte flotteInitialeAdversaire) {
      
+        champJoueur = new char[10][10];
+        champAdversaire = new char[10][10];
+        evenement = "Premier tour";
+
         List<Case> casesOccupeesJoueur     = flotteInitialeJoueur.getCasesOccupees();
         List<Case> casesOccupeesAdversaire = flotteInitialeAdversaire.getCasesOccupees();
 
@@ -32,11 +41,8 @@ public class Tour {
             champJoueur[c.get_i()][c.get_j()] = 'n';
         }
         for (Case c : casesOccupeesAdversaire) {
-            System.out.println(c.get_i() + " " + c.get_j());
             champAdversaire[c.get_i()][c.get_j()] = 'n';
         }
-
-        evenement = "premier tour";
     }
 
     public Tour (Tour t) {
@@ -45,39 +51,52 @@ public class Tour {
         this.evenement = t.evenement;
     }
 
+    // getters
+    public char getChampJoueur(int i, int j) {
+        return champJoueur[i][j];
+    }
+
+    public char getChampAdversaire(int i, int j) {
+        return champAdversaire[i][j];
+    }
     public char[][] getChampJoueur() {
         return champJoueur;
     }
-
-    public void setChampJoueur(char[][] champJoueur) {
-        this.champJoueur = champJoueur;
-    }
-
     public char[][] getChampAdversaire() {
         return champAdversaire;
     }
-
-    public void setChampAdversaire(char[][] champAdversaire) {
-        this.champAdversaire = champAdversaire;
-    }
-
     public String getEvenement() {
         return evenement;
     }
 
+    // setters
+    public void setChampJoueur(int i, int j, char c) {
+        this.champJoueur[i][j] = c;
+    }
+    public void setChampAdversaire(int i, int j, char c) {
+        this.champAdversaire[i][j] = c;
+    }
+    @XmlElement
+    public void setChampJoueur(char[][] champJoueur) {
+        this.champJoueur = champJoueur;
+    }
+    @XmlElement
+    public void setChampAdversaire(char[][] champAdversaire) {
+        this.champAdversaire = champAdversaire;
+    }
+    @XmlElement
     public void setEvenement(String evenement) {
         this.evenement = evenement;
-    }
+    } 
 
-    public int setChampsJoueur(Case caseTemporaire, String messageAttaque) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-        
-    public int setChampsAdversaire(Case caseTemporaire, String messageAttaque) {
-       // TODO Auto-generated method stub
-        return 0;
-    }
-        
+    public boolean partieEstTerminee() {
+        if (evenement == "Vous avez gagné" ||
+                evenement == "Vous avez perdu" ||
+                evenement == "Partie terminée" ||
+                evenement == "Nouveau record") {
+            return true;  
+        }
+        return false;
+    }       
 }
  

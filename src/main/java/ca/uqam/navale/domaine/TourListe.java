@@ -1,7 +1,9 @@
 package ca.uqam.navale.domaine;
 
+import javax.xml.bind.annotation.*;
 import java.util.*;
 
+@XmlRootElement
 public class TourListe {
 
     ArrayList<Tour> elements;
@@ -36,5 +38,16 @@ public class TourListe {
             return null;
         }
     } 
+
+    // getter
+    public ArrayList<Tour> getElements() {
+        return elements;
+    }
+
+    // setter
+    @XmlElement
+    public void setElements(ArrayList<Tour> elements) {
+        this.elements = elements;
+    }
 }
                                                                            

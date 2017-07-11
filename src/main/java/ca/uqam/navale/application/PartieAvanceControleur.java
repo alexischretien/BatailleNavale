@@ -13,8 +13,7 @@ public class PartieAvanceControleur implements PartieControleur {
     Flotte flotteJoueur;
     Flotte flotteAdversaire;
     LocalDateTime heureDebut;
-    LocalDateTime heureFin;
-    boolean joueurCommence;
+    int nbSecondesPartie;
     TourListe tours;
     TourIterateur tourIter;
 
@@ -38,9 +37,10 @@ public class PartieAvanceControleur implements PartieControleur {
      */
     public Tour attaquerAdversaire(Case c) {
     	String messageAttaque = this.flotteAdversaire.attaquer(c);    	
-    	
-    	this.tours.getElement(this.tourIter.courant().setChampsAdversaire(c,messageAttaque));        
-        return this.tourIter.courant();
+    
+        return null;	
+   // 	this.tours.getElement(this.tourIter.courant().setChampsAdversaire(c,messageAttaque));        
+   //     return this.tourIter.courant();
     }
     
     public Tour getAttaqueAdversaire() {
@@ -69,10 +69,10 @@ public class PartieAvanceControleur implements PartieControleur {
       * @param temps Le temps obtenu
       * @see ca.uqam.navale.application.PartieControleur#miseAJourRecords(java.lang.String, int)
       */
-     public void miseAJourRecords(String nom, int temps) throws IOException, ParseException {
+     public void miseAJourRecords(String nom) throws IOException, ParseException {
          Records r = EntreeSortieFichier.recupererRecords();
          r.setNomRecordAvance(nom);
-         r.setTempsRecordAvance(temps);
+         r.setTempsRecordAvance(nbSecondesPartie);
          EntreeSortieFichier.ecrireRecords(r);
       
      }
