@@ -1,91 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <partieDebutantControleur>
     <flotteAdversaire>
-        <contre_torpilleurs>
+        <cases_attaquees>
+            <_i>4</_i>
+            <_j>2</_j>
+        </cases_attaquees>
+        <cases_attaquees>
             <_i>4</_i>
             <_j>7</_j>
+        </cases_attaquees>
+        <cases_attaquees>
+            <_i>7</_i>
+            <_j>6</_j>
+        </cases_attaquees>
+        <cases_attaquees>
+            <_i>2</_i>
+            <_j>4</_j>
+        </cases_attaquees>
+        <cases_attaquees>
+            <_i>8</_i>
+            <_j>2</_j>
+        </cases_attaquees>
+        <contre_torpilleurs>
+            <_i>4</_i>
+            <_j>0</_j>
         </contre_torpilleurs>
         <contre_torpilleurs>
-            <_i>5</_i>
-            <_j>7</_j>
-        </contre_torpilleurs>
-        <contre_torpilleurs>
-            <_i>6</_i>
-            <_j>7</_j>
+            <_i>4</_i>
+            <_j>1</_j>
         </contre_torpilleurs>
         <croiseur>
+            <_i>0</_i>
+            <_j>7</_j>
+        </croiseur>
+        <croiseur>
             <_i>1</_i>
-            <_j>3</_j>
+            <_j>7</_j>
+        </croiseur>
+        <croiseur>
+            <_i>2</_i>
+            <_j>7</_j>
         </croiseur>
         <croiseur>
             <_i>3</_i>
-            <_j>3</_j>
-        </croiseur>
-        <croiseur>
-            <_i>4</_i>
-            <_j>3</_j>
+            <_j>7</_j>
         </croiseur>
         <porte_avion>
-            <_i>6</_i>
+            <_i>1</_i>
+            <_j>0</_j>
+        </porte_avion>
+        <porte_avion>
+            <_i>1</_i>
             <_j>1</_j>
         </porte_avion>
         <porte_avion>
-            <_i>6</_i>
+            <_i>1</_i>
             <_j>2</_j>
         </porte_avion>
         <porte_avion>
-            <_i>6</_i>
+            <_i>1</_i>
             <_j>3</_j>
         </porte_avion>
         <porte_avion>
-            <_i>6</_i>
-            <_j>5</_j>
+            <_i>1</_i>
+            <_j>4</_j>
         </porte_avion>
         <sous_marin>
-            <_i>1</_i>
-            <_j>8</_j>
+            <_i>5</_i>
+            <_j>1</_j>
         </sous_marin>
         <sous_marin>
-            <_i>2</_i>
-            <_j>8</_j>
+            <_i>5</_i>
+            <_j>2</_j>
+        </sous_marin>
+        <sous_marin>
+            <_i>5</_i>
+            <_j>3</_j>
         </sous_marin>
         <torpilleur>
-            <_i>9</_i>
-            <_j>6</_j>
+            <_i>6</_i>
+            <_j>8</_j>
         </torpilleur>
         <torpilleur>
-            <_i>9</_i>
-            <_j>7</_j>
+            <_i>6</_i>
+            <_j>9</_j>
         </torpilleur>
     </flotteAdversaire>
     <flotteJoueur>
+        <cases_attaquees>
+            <_i>0</_i>
+            <_j>7</_j>
+        </cases_attaquees>
+        <cases_attaquees>
+            <_i>6</_i>
+            <_j>8</_j>
+        </cases_attaquees>
+        <cases_attaquees>
+            <_i>7</_i>
+            <_j>7</_j>
+        </cases_attaquees>
+        <cases_attaquees>
+            <_i>2</_i>
+            <_j>9</_j>
+        </cases_attaquees>
+        <cases_attaquees>
+            <_i>8</_i>
+            <_j>1</_j>
+        </cases_attaquees>
         <contre_torpilleurs>
-            <_i>5</_i>
+            <_i>7</_i>
             <_j>4</_j>
         </contre_torpilleurs>
         <contre_torpilleurs>
-            <_i>5</_i>
+            <_i>7</_i>
             <_j>5</_j>
         </contre_torpilleurs>
         <contre_torpilleurs>
-            <_i>5</_i>
+            <_i>7</_i>
             <_j>6</_j>
         </contre_torpilleurs>
         <croiseur>
-            <_i>3</_i>
-            <_j>2</_j>
-        </croiseur>
-        <croiseur>
-            <_i>3</_i>
+            <_i>4</_i>
             <_j>3</_j>
         </croiseur>
         <croiseur>
-            <_i>3</_i>
+            <_i>4</_i>
             <_j>4</_j>
         </croiseur>
         <croiseur>
-            <_i>3</_i>
+            <_i>4</_i>
             <_j>5</_j>
+        </croiseur>
+        <croiseur>
+            <_i>4</_i>
+            <_j>6</_j>
         </croiseur>
         <porte_avion>
             <_i>1</_i>
@@ -108,24 +156,24 @@
             <_j>8</_j>
         </porte_avion>
         <sous_marin>
-            <_i>8</_i>
-            <_j>1</_j>
+            <_i>2</_i>
+            <_j>4</_j>
         </sous_marin>
         <sous_marin>
-            <_i>8</_i>
-            <_j>2</_j>
+            <_i>2</_i>
+            <_j>5</_j>
         </sous_marin>
         <sous_marin>
-            <_i>8</_i>
-            <_j>3</_j>
+            <_i>2</_i>
+            <_j>6</_j>
         </sous_marin>
         <torpilleur>
-            <_i>8</_i>
-            <_j>6</_j>
+            <_i>5</_i>
+            <_j>5</_j>
         </torpilleur>
         <torpilleur>
-            <_i>8</_i>
-            <_j>7</_j>
+            <_i>5</_i>
+            <_j>6</_j>
         </torpilleur>
     </flotteJoueur>
     <heureDebut/>
@@ -140,7 +188,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>110</item>
                 <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -148,91 +208,43 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
                 <item>116</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -247,8 +259,44 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -256,19 +304,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
@@ -279,42 +327,6 @@
             <champJoueur>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
@@ -332,7 +344,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
@@ -341,23 +365,47 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
-                <item>101</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>100</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
                 <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
@@ -383,53 +431,29 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>110</item>
                 <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>110</item>
                 <item>101</item>
@@ -448,2069 +472,77 @@
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
-                <item>101</item>
-                <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>110</item>
+                <item>100</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
-                <item>110</item>
                 <item>110</item>
                 <item>110</item>
-                <item>116</item>
                 <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
-                <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
                 <item>110</item>
-                <item>101</item>
-                <item>101</item>
             </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
+            <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
                 <item>101</item>
                 <item>101</item>
+                <item>100</item>
                 <item>101</item>
                 <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
-            </champJoueur>
+            </champAdversaire>
             <champJoueur>
                 <item>101</item>
                 <item>101</item>
@@ -2528,210 +560,62 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
-                <item>100</item>
-                <item>101</item>
                 <item>110</item>
                 <item>110</item>
-                <item>100</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Dans l'eau</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>116</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
                 <item>110</item>
                 <item>110</item>
-                <item>116</item>
                 <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
                 <item>101</item>
-                <item>101</item>
                 <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
+            </champJoueur>
             <champJoueur>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
             </champJoueur>
             <champJoueur>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
+            </champJoueur>
+            <champJoueur>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
             </champJoueur>
             <champJoueur>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -2740,36 +624,22 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>100</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
@@ -2777,17 +647,8 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
@@ -2813,7 +674,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>110</item>
                 <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -2821,91 +694,43 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
                 <item>116</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -2920,8 +745,44 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -2929,19 +790,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
@@ -2952,42 +813,6 @@
             <champJoueur>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
@@ -3005,7 +830,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
@@ -3014,23 +851,47 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
-                <item>101</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>100</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
                 <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
@@ -3056,7 +917,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>110</item>
                 <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -3064,91 +937,43 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
                 <item>116</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -3163,193 +988,10 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
                 <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <evenement>Touché</evenement>
-        </elements>
-        <elements>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
@@ -3358,40 +1000,16 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>100</item>
                 <item>101</item>
-                <item>110</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -3406,8 +1024,8 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -3415,19 +1033,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
@@ -3438,42 +1056,6 @@
             <champJoueur>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
@@ -3491,7 +1073,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
@@ -3500,23 +1094,47 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
-                <item>101</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>100</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
                 <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
@@ -3542,7 +1160,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>110</item>
                 <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -3550,91 +1180,43 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
                 <item>116</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>110</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>116</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -3649,8 +1231,44 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -3658,19 +1276,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
@@ -3681,42 +1299,6 @@
             <champJoueur>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
@@ -3734,7 +1316,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
@@ -3743,23 +1337,11 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>110</item>
                 <item>110</item>
-                <item>110</item>
-                <item>100</item>
                 <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>100</item>
+                <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>
@@ -3771,10 +1353,46 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>100</item>
                 <item>101</item>
                 <item>101</item>
             </champJoueur>
-            <evenement>Touché</evenement>
+            <champJoueur>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <evenement>Dans l'eau</evenement>
         </elements>
         <elements>
             <champAdversaire>
@@ -3785,7 +1403,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>110</item>
                 <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -3793,44 +1423,494 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
                 <item>116</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
                 <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
+                <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <evenement>Dans l'eau</evenement>
+        </elements>
+        <elements>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
                 <item>116</item>
                 <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
                 <item>110</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <evenement>Dans l'eau</evenement>
+        </elements>
+        <elements>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
@@ -3850,21 +1930,9 @@
                 <item>101</item>
             </champAdversaire>
             <champAdversaire>
-                <item>101</item>
-                <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>116</item>
-                <item>110</item>
-                <item>101</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-            </champAdversaire>
-            <champAdversaire>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -3875,9 +1943,9 @@
             </champAdversaire>
             <champAdversaire>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>100</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -3892,8 +1960,44 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
             </champAdversaire>
@@ -3901,19 +2005,19 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
                 <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
@@ -3924,42 +2028,6 @@
             <champJoueur>
                 <item>101</item>
                 <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>110</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-                <item>101</item>
-            </champJoueur>
-            <champJoueur>
-                <item>101</item>
-                <item>100</item>
                 <item>101</item>
                 <item>101</item>
                 <item>110</item>
@@ -3977,6 +2045,213 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <evenement>Dans l'eau</evenement>
+        </elements>
+        <elements>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>116</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>100</item>
                 <item>101</item>
                 <item>101</item>
@@ -3986,7 +2261,31 @@
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
                 <item>100</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
                 <item>101</item>
                 <item>101</item>
@@ -3995,14 +2294,548 @@
             </champJoueur>
             <champJoueur>
                 <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>100</item>
                 <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <evenement>Dans l'eau</evenement>
+        </elements>
+        <elements>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>116</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
                 <item>110</item>
                 <item>110</item>
                 <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <evenement>Dans l'eau</evenement>
+        </elements>
+        <elements>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>110</item>
+                <item>110</item>
+                <item>116</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champAdversaire>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champAdversaire>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>110</item>
+                <item>110</item>
+                <item>110</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+            </champJoueur>
+            <champJoueur>
+                <item>101</item>
+                <item>100</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
+                <item>101</item>
                 <item>101</item>
             </champJoueur>
             <champJoueur>

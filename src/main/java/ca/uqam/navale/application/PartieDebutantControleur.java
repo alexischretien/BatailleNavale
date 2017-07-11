@@ -67,7 +67,7 @@ public class PartieDebutantControleur implements PartieControleur {
         }
         else if (evenement == "Partie terminée") {
 
-            int nbSecondesRecord = Integer.MAX_VALUE;
+            int nbSecondesRecord = 0;
             nbSecondesPartie = (int) Duration.between(heureDebut, LocalDateTime.now()).getSeconds();      
 
             try {

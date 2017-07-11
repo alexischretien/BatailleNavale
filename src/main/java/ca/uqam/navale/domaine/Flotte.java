@@ -176,6 +176,9 @@ public class Flotte {
     public List<Case> getTorpilleur() {
         return torpilleur;
     }
+    public List<Case> getCases_attaquees() {
+        return cases_attaquees;
+    }
 
     // setters
     @XmlElement
@@ -197,5 +200,9 @@ public class Flotte {
     @XmlElement
     public void setTorpilleur(List<Case> torpilleur) {
         this.torpilleur = torpilleur;
+    }
+    @XmlElement
+    public void setCases_attaquees(List<Case> cases_attaquees) {
+        this.cases_attaquees = cases_attaquees;
     }
 }
