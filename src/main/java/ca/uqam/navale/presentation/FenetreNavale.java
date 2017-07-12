@@ -20,42 +20,43 @@ public class FenetreNavale extends JFrame {
     private static final int   CONTRE_TORPILLEURS_ID =  2;
     private static final int   SOUS_MARIN_ID         =  3; 
     private static final int   TORPILLEUR_ID         =  4;
+    private static final Color COULEUR_CASE_INVALIDE = new Color(0, 0, 0);
     private static final Color BLEU        = new Color(0, 0, 230);
     private static final Color BLEU_FONCE  = new Color(0, 0, 102);
     private static final Color ROUGE       = new Color(230, 0, 0);
     private static final Color ROUGE_FONCE = new Color(102, 0, 0);
     private static final Color GRIS        = new Color(220, 220, 220);
     private static final Color GRIS_FONCE  = new Color(128, 128, 128);
-
+   
     private EcouteurFenetreNavale ecouteur;
 
-    GridLayout gridPanneauBoutons;
-    JPanel panneauBoutons;
-    JPanel panneauGrilleJoueur;
-    JPanel panneauGrilleAdversaire;
-    JPanel panneauEvenement;
-    JRadioButton boutonRadioDebutant;
-    JRadioButton boutonRadioAvance;
-    JButton boutonPartie;
-    JButton boutonRecharger;
-    JButton boutonRecords;
-    JButton boutonJouer;
-    JButton boutonTourPrecedent;
-    JButton boutonTourSuivant;
-    JButton boutonMenu;
-    JButton boutonFermer;
-    JButton boutonSauvegarde;
-    JButton boutonVisualisation;
-    JRadioButton boutonHor;
-    JRadioButton boutonVer;
-    JRadioButton boutonPorteAvion;
-    JRadioButton boutonCroiseur;
-    JRadioButton boutonContreTorpilleurs;
-    JRadioButton boutonSousMarin;
-    JRadioButton boutonTorpilleur;
-    JButton grilleJoueur[][];
-    JButton grilleAdversaire[][];
-    JTextArea messageEvenement;
+    private JPanel panneauBoutons;
+    private JPanel panneauGrilleJoueur;
+    private JPanel panneauGrilleAdversaire;
+    private JPanel panneauEvenement;
+    private JRadioButton boutonRadioDebutant;
+    private JRadioButton boutonRadioAvance;
+    private JRadioButton boutonRadioEnLigne;
+    private JButton boutonPartie;
+    private JButton boutonRecharger;
+    private JButton boutonRecords;
+    private JButton boutonJouer;
+    private JButton boutonTourPrecedent;
+    private JButton boutonTourSuivant;
+    private JButton boutonMenu;
+    private JButton boutonFermer;
+    private JButton boutonSauvegarde;
+    private JButton boutonVisualisation;
+    private JRadioButton boutonHor;
+    private JRadioButton boutonVer;
+    private JRadioButton boutonPorteAvion;
+    private JRadioButton boutonCroiseur;
+    private JRadioButton boutonContreTorpilleurs;
+    private JRadioButton boutonSousMarin;
+    private JRadioButton boutonTorpilleur;
+    private JButton grilleJoueur[][];
+    private JButton grilleAdversaire[][];
+    private JTextArea messageEvenement;
 
     public FenetreNavale() {
 
@@ -63,6 +64,7 @@ public class FenetreNavale extends JFrame {
 
         boutonRadioDebutant = new JRadioButton("Débutant");
         boutonRadioAvance   = new JRadioButton("Avancé");
+        boutonRadioEnLigne  = new JRadioButton("En ligne");
 
         boutonPartie    = new JButton("Nouvelle partie");
         boutonRecharger = new JButton("Recharger une partie");
@@ -100,10 +102,35 @@ public class FenetreNavale extends JFrame {
         initFenetreMenu();
     }
 
-    public void activerSauvegarde(boolean b) {
+    public void initFenetreMenu() {
 
-    // à compléter
+        getContentPane().removeAll();
+        panneauBoutons = new JPanel();
+        panneauBoutons.setLayout(new GridLayout(1, 5));
 
+        JPanel panneauBoutonsRadio = new JPanel();
+        panneauBoutonsRadio.setLayout(new GridLayout(3, 1));
+
+        ButtonGroup boutonsRadio = new ButtonGroup();
+
+        boutonRadioDebutant.setSelected(true);
+
+        boutonsRadio.add(boutonRadioDebutant);
+        boutonsRadio.add(boutonRadioAvance);
+        boutonsRadio.add(boutonRadioEnLigne);
+
+        panneauBoutonsRadio.add(boutonRadioDebutant);
+        panneauBoutonsRadio.add(boutonRadioAvance);
+        panneauBoutonsRadio.add(boutonRadioEnLigne);
+
+        panneauBoutons.add(boutonPartie);
+        panneauBoutons.add(panneauBoutonsRadio);
+        panneauBoutons.add(boutonRecharger);
+        panneauBoutons.add(boutonRecords);
+        panneauBoutons.add(boutonFermer);
+
+        add(panneauBoutons);
+        pack();
     }
 
     public void initFenetreAttente() {
@@ -202,9 +229,13 @@ public class FenetreNavale extends JFrame {
         pack();
     }
 
-    public void initFenetrePartie(boolean joueurCommence) {
+    public void initFenetrePartie() {
            
         getContentPane().removeAll();
+        
+        panneauGrilleJoueur = new JPanel();
+        panneauGrilleJoueur.setLayout(new GridLayout(10, 10));
+        panneauGrilleJoueur.setBorder(new TitledBorder("Votre grille"));
        
         panneauGrilleAdversaire = new JPanel();
         panneauGrilleAdversaire.setLayout(new GridLayout(10, 10));
@@ -212,14 +243,17 @@ public class FenetreNavale extends JFrame {
 
         for(int i = 0 ; i < 10 ; ++i) {
             for (int j = 0 ; j < 10 ; ++j) {
+                grilleJoueur[i][j] = new JButton();
                 grilleJoueur[i][j].setEnabled(false);
+                grilleJoueur[i][j].setBackground(BLEU);
+                grilleJoueur[i][j].setPreferredSize(new Dimension(30, 30));
                 grilleJoueur[i][j].removeActionListener(ecouteur);
                 grilleAdversaire[i][j] = new JButton();
                 grilleAdversaire[i][j].setBackground(ROUGE);
                 grilleAdversaire[i][j].setPreferredSize(new Dimension(30,30));
-                grilleAdversaire[i][j].addActionListener(ecouteur);
-                grilleAdversaire[i][j].setEnabled(joueurCommence);               
-                
+                grilleAdversaire[i][j].addActionListener(ecouteur);               
+               
+                panneauGrilleJoueur.add(grilleJoueur[i][j]); 
                 panneauGrilleAdversaire.add(grilleAdversaire[i][j]);
             }
         }
@@ -272,47 +306,53 @@ public class FenetreNavale extends JFrame {
     pack();
     }
 
-    public void initFenetreVisualisationTour(Tour tour) {
+    public void initFenetreVisualisation() {
 
-    // à compléter
-    }
-    public void initFenetreMenu() {
-       
         getContentPane().removeAll();
 
-        panneauBoutons = new JPanel();
-        gridPanneauBoutons = new GridLayout(1, 5);   
-        panneauBoutons.setLayout(gridPanneauBoutons);
+        JPanel panneauBoutons = new JPanel();
+        panneauBoutons.setLayout(new GridLayout(1, 3));
 
-        JPanel panneauBoutonsRadio = new JPanel();
-        GridLayout gridPanneauBoutonsRadio = new GridLayout(2, 1);
-        panneauBoutonsRadio.setLayout(gridPanneauBoutonsRadio);
+        panneauBoutons.add(boutonTourPrecedent);
+        panneauBoutons.add(boutonTourSuivant);
+        panneauBoutons.add(boutonMenu);
+        boutonTourPrecedent.setEnabled(false);
 
-        ButtonGroup boutonsRadio = new ButtonGroup();
+        JPanel panneauGrilleJoueur = new JPanel();
+        panneauGrilleJoueur.setLayout(new GridLayout(10, 10));
+        panneauGrilleJoueur.setBorder(new TitledBorder("Votre grille"));
 
-        boutonRadioDebutant.setSelected(true);
-                  
-        boutonsRadio.add(boutonRadioDebutant);
-        boutonsRadio.add(boutonRadioAvance);
+        JPanel panneauGrilleAdversaire = new JPanel();
+        panneauGrilleAdversaire.setLayout(new GridLayout(10, 10));
+        panneauGrilleAdversaire.setBorder(new TitledBorder("Grille de l'adversaire"));
 
-        panneauBoutonsRadio.add(boutonRadioDebutant);
-        panneauBoutonsRadio.add(boutonRadioAvance);
+        for (int i = 0 ; i < 10 ; ++i) {
+            for (int j = 0 ; j < 10 ; ++j) {
+                panneauGrilleJoueur.add(grilleJoueur[i][j]);
+                panneauGrilleAdversaire.add(grilleAdversaire[i][j]);
+                grilleJoueur[i][j].setEnabled(false);
+                grilleAdversaire[i][j].setEnabled(false);
+            }
+        }
+        panneauEvenement = new JPanel();
+        panneauEvenement.setLayout(new GridLayout(1,1));
+        panneauEvenement.setBorder(new TitledBorder("Événement"));
+        panneauEvenement.add(messageEvenement);
+        messageEvenement.setEditable(false);
 
-        panneauBoutons.add(boutonPartie);
-        panneauBoutons.add(panneauBoutonsRadio);
-        panneauBoutons.add(boutonRecharger);
-        panneauBoutons.add(boutonRecords);
-        panneauBoutons.add(boutonFermer);
-
-        add(panneauBoutons, BorderLayout.SOUTH);
-        pack(); 
+        setLayout(new GridLayout(2,2));
+        add(panneauGrilleJoueur);
+        add(panneauGrilleAdversaire);
+        add(panneauBoutons);
+        add(panneauEvenement);
+        pack();
     }
     
     public void miseAJourPlacementsNavires(List<Case> casesOccupees) {
 
         for (int i = 0 ; i < 10 ; ++i) {
             for (int j = 0 ; j < 10 ; ++j) {
-                grilleJoueur[i][j].setBackground(Color.blue);
+                grilleJoueur[i][j].setBackground(BLEU);
             }
         }
         for (Case c : casesOccupees) {
@@ -326,27 +366,21 @@ public class FenetreNavale extends JFrame {
 
         for (int i = 0 ; i < 10 ; ++i) {
             for (int j = 0 ; j < 10 ; ++j) {
-                              
-                grilleAdversaire[i][j].setEnabled(auTourDuJoueur); 
                 
-                if (tour.getChampJoueur(i, j) == 'd') {
-                    grilleJoueur[i][j].setBackground(BLEU_FONCE);
-                }
-                else if (tour.getChampJoueur(i, j) == 't') {
-                    grilleJoueur[i][j].setBackground(GRIS_FONCE);
-                }
+                Color couleurCaseJoueur     = getCouleurCase(tour.getChampJoueur(i, j), true);
+                Color couleurCaseAdversaire = getCouleurCase(tour.getChampAdversaire(i, j), false);
 
-                if (tour.getChampAdversaire(i, j) == 'd') {
-                    grilleAdversaire[i][j].setBackground(ROUGE_FONCE);
-                    grilleAdversaire[i][j].setEnabled(false);
-                }
-                else if (tour.getChampAdversaire(i, j) == 't') {
-                    grilleAdversaire[i][j].setBackground(GRIS_FONCE);
+                grilleAdversaire[i][j].setEnabled(auTourDuJoueur);            
+                grilleJoueur[i][j].setBackground(couleurCaseJoueur);
+
+                if (couleurCaseAdversaire == ROUGE_FONCE ||
+                        couleurCaseAdversaire == GRIS_FONCE) {
+                    grilleAdversaire[i][j].setBackground(couleurCaseAdversaire);
                     grilleAdversaire[i][j].setEnabled(false);
                 }
             }
         }
-        if (tour.partieEstTerminee()) {
+        if (tour.estDernierTour()) {
             messageEvenement.setText(tour.getEvenement());
             boutonSauvegarde.setEnabled(false);
             boutonVisualisation.setEnabled(true);
@@ -358,6 +392,23 @@ public class FenetreNavale extends JFrame {
                 messageEvenement.setText(tour.getEvenement());
             }
         }
+    }
+
+    public void miseAJourVisualisation(Tour tour) {
+
+        for (int i = 0 ; i < 10 ; ++i) {
+            for (int j = 0 ; j < 10 ; ++j) {
+                grilleJoueur[i][j].setBackground(getCouleurCase(tour.getChampJoueur(i, j), true));
+                grilleAdversaire[i][j].setBackground(getCouleurCase(tour.getChampAdversaire(i, j), false));            
+            }
+        }
+        messageEvenement.setText(tour.getEvenement());
+       
+        System.out.println("tour.evenement == " + tour.getEvenement()); 
+        System.out.println("estPremierTour() == " + tour.estPremierTour());
+        System.out.println("estDernierTour() == " + tour.estDernierTour());
+        boutonTourPrecedent.setEnabled(!tour.estPremierTour());
+        boutonTourSuivant.setEnabled(!tour.estDernierTour());
     }
 
     public boolean estNavireHorizontal() {
@@ -373,5 +424,67 @@ public class FenetreNavale extends JFrame {
         if (boutonSousMarin.isSelected())         return SOUS_MARIN_ID;
         if (boutonTorpilleur.isSelected())        return TORPILLEUR_ID;
         return NAVIRE_INVALIDE_ID;
+    }
+    
+    private Color getCouleurCase(char contenu, boolean caseJoueur) {
+
+        if (contenu == 'n') return GRIS;
+        if (contenu == 't') return GRIS_FONCE;
+        if (caseJoueur == true) {
+            if (contenu == 'e') return BLEU;
+            if (contenu == 'd') return BLEU_FONCE;
+        }
+        else {
+            if (contenu == 'e') return ROUGE;
+            if (contenu == 'd') return ROUGE_FONCE;
+        }
+        return COULEUR_CASE_INVALIDE;
+    }
+
+    // getters
+    public JButton getBoutonPartie() {
+        return boutonPartie;
+    }
+    public JButton getBoutonRecharger() {
+        return boutonRecharger;
+    }
+    public JButton getBoutonRecords() {
+        return boutonRecords;
+    }
+    public JButton getBoutonJouer() {
+        return boutonJouer;
+    }
+    public JButton getBoutonTourPrecedent() {
+        return boutonTourPrecedent;
+    }
+    public JButton getBoutonTourSuivant() {
+        return boutonTourSuivant;
+    }
+    public JButton getBoutonMenu() {
+        return boutonMenu;
+    }
+    public JButton getBoutonFermer() {
+        return boutonFermer;
+    }
+    public JButton getBoutonSauvegarde() {
+        return boutonSauvegarde;
+    }
+    public JButton getBoutonVisualisation() {
+        return boutonVisualisation;
+    }
+    public JButton getGrilleJoueur(int i, int j) {
+        return grilleJoueur[i][j];
+    }
+    public JButton getGrilleAdversaire(int i, int j) {
+        return grilleAdversaire[i][j];
+    }
+    public JRadioButton getBoutonRadioDebutant() {
+        return boutonRadioDebutant;
+    }
+    public JRadioButton getBoutonRadioAvance() {
+        return boutonRadioAvance;
+    }
+    public JRadioButton getBoutonRadioEnLigne() {
+        return boutonRadioEnLigne;
     }
 }

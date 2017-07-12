@@ -46,10 +46,29 @@ public class Tour {
     }
 
     public Tour (Tour t) {
-        this.champJoueur = t.champJoueur;
-        this.champAdversaire = t.champAdversaire;
+
+        this.champJoueur = new char[10][10];
+        this.champAdversaire = new char[10][10];
+
+        for (int i = 0 ; i < 10 ; ++i) {
+            for (int j = 0 ; j < 10 ; ++j) {
+                this.champJoueur[i][j] = t.getChampJoueur(i, j);
+                this.champAdversaire[i][j] = t.getChampAdversaire(i, j);
+            }
+        }
         this.evenement = t.evenement;
     }
+
+    public boolean estPremierTour() {
+        return evenement.equals("Premier tour");
+    }
+    public boolean estDernierTour() {
+        return (evenement.equals("Vous avez gagné") ||
+                evenement.equals("Vous avez perdu") ||
+                evenement.equals("Partie terminée") ||
+                evenement.equals("Nouveau record"));
+    }
+
 
     // getters
     public char getChampJoueur(int i, int j) {
@@ -87,16 +106,6 @@ public class Tour {
     @XmlElement
     public void setEvenement(String evenement) {
         this.evenement = evenement;
-    } 
-
-    public boolean partieEstTerminee() {
-        if (evenement == "Vous avez gagné" ||
-                evenement == "Vous avez perdu" ||
-                evenement == "Partie terminée" ||
-                evenement == "Nouveau record") {
-            return true;  
-        }
-        return false;
-    }       
+    }     
 }
  

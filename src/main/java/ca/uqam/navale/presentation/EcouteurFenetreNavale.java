@@ -28,18 +28,23 @@ public class EcouteurFenetreNavale implements ActionListener {
         Object source = evt.getSource();
 
         // lancement d'une partie
-        if (source == fenetre.boutonPartie) {
+        if (source == fenetre.getBoutonPartie()) {
 
-            if (fenetre.boutonRadioDebutant.isSelected() == true) {
+            if (fenetre.getBoutonRadioDebutant().isSelected()) {
                 partieControleur = new PartieDebutantControleur();
+                fenetre.initFenetrePlacementNavires();
+            }
+            else if (fenetre.getBoutonRadioAvance().isSelected()) {
+                partieControleur = new PartieAvanceControleur();
+                fenetre.initFenetrePlacementNavires();
             }
             else {
-                partieControleur = new PartieAvanceControleur();
+                JOptionPane.showMessageDialog(fenetre, "Le jeu en ligne n'est pas " +
+                                                       "encore implémenté");
             }
-            fenetre.initFenetrePlacementNavires();
         } 
         // Sauvegarde de la partie
-        else if (source == fenetre.boutonSauvegarde) {
+        else if (source == fenetre.getBoutonSauvegarde()) {
             try {
                 EntreeSortieFichier.ecrireSauvegarde(partieControleur);
                 JOptionPane.showMessageDialog(fenetre, "Partie sauvegardée");
@@ -52,11 +57,20 @@ public class EcouteurFenetreNavale implements ActionListener {
             }
         }
         // recharger une partie sauvegardée
-        else if (source == fenetre.boutonRecharger) {
-            System.out.println("Demande de recharge de partie");
+        else if (source == fenetre.getBoutonRecharger()) {
+            
+            partieControleur = EntreeSortieFichier.chargerSauvegarde();
+                  
+            if (partieControleur == null) {
+                JOptionPane.showMessageDialog(fenetre, "Aucune partie n'a été sauvegardée");
+            }
+            else {
+                fenetre.initFenetrePartie();
+                fenetre.miseAJourPartie(partieControleur.getDernierTour(), true);
+            }   
         }
         // voir les records
-        else if (source == fenetre.boutonRecords) {
+        else if (source == fenetre.getBoutonRecords()) {
             try {
                 Records records = EntreeSortieFichier.recupererRecords();
                 fenetre.initFenetreRecords(records);
@@ -69,29 +83,42 @@ public class EcouteurFenetreNavale implements ActionListener {
             }
         }
         // Retour au menu
-        else if (source == fenetre.boutonMenu) {
+        else if (source == fenetre.getBoutonMenu()) {
             fenetre.initFenetreMenu();
         }
         // lancement de la partie apres positionnement des navires
-        else if (source == fenetre.boutonJouer) {
+        else if (source == fenetre.getBoutonJouer()) {
 
             boolean joueurCommence = partieControleur.init();
-            fenetre.initFenetrePartie(joueurCommence);          
-          
+            fenetre.initFenetrePartie();          
+            fenetre.miseAJourPartie(partieControleur.getDernierTour(), joueurCommence);
             if (joueurCommence == false) {
                 Tour tour = partieControleur.getAttaqueAdversaire();
                 fenetre.miseAJourPartie(tour, true);
             }
         }
+        // début de la visualisation de la partie
+        else if (source == fenetre.getBoutonVisualisation()) {
+            fenetre.initFenetreVisualisation();
+            fenetre.miseAJourVisualisation(partieControleur.getPremierTour());
+        }
+        // visualisation du tour précédent
+        else if (source == fenetre.getBoutonTourPrecedent()) {
+            fenetre.miseAJourVisualisation(partieControleur.getTourPrecedent());
+        }
+        // visualisation du tour suivant
+        else if (source == fenetre.getBoutonTourSuivant()) {
+            fenetre.miseAJourVisualisation(partieControleur.getTourSuivant());
+        }
         // fermeture du programme
-        else if (source == fenetre.boutonFermer) {
+        else if (source == fenetre.getBoutonFermer()) {
             fenetre.dispose();
         }
         else {
             for (int i = 0 ; i < 10 ; ++i) {
                 for (int j = 0 ; j < 10 ; ++j) {
                     // placement d'un navire en debutant de partie
-                    if (source == fenetre.grilleJoueur[i][j]) {
+                    if (source == fenetre.getGrilleJoueur(i, j)) {
                        List<Case> casesOccupees = partieControleur.positionnerNavire(i, j, 
                                                                   fenetre.estNavireHorizontal(), 
                                                                   fenetre.getNavireId()); 
@@ -99,30 +126,32 @@ public class EcouteurFenetreNavale implements ActionListener {
                        return; 
                     }
                     // le joueur attaque une case de l'adversaire
-                    else if (source == fenetre.grilleAdversaire[i][j]) {
+                    else if (source == fenetre.getGrilleAdversaire(i, j)) {
                         Tour tour = partieControleur.attaquerAdversaire(new Case(i, j));
                         fenetre.miseAJourPartie(tour, false);
                          
-                        if (!tour.partieEstTerminee()) {
+                        if (!tour.estDernierTour()) {
                             tour = partieControleur.getAttaqueAdversaire();
-                            fenetre.miseAJourPartie(tour, !tour.partieEstTerminee());
+                            fenetre.miseAJourPartie(tour, true);
                         }
-                        else if (tour.getEvenement() == "Nouveau record") {
+                        else if (tour.getEvenement().equals("Nouveau record")) {
                             String nom = JOptionPane.showInputDialog(fenetre,
                                                  "Vous avez battu le meilleur temps!\n " +
                                                  "Veuillez entrer votre nom.", null);
-                            if (nom != null) {
-                                try {
-                                    partieControleur.miseAJourRecords(nom);
-                                }
-                                catch(IOException e) {
-                                    Logger.getLogger(EntreeSortieFichier.class.getName())
+                            if (nom == null) {
+                                nom = "Sans nom";
+                            }
+                            try {
+                                partieControleur.miseAJourRecords(nom);
+                            }
+                            catch(IOException e) {
+                                Logger.getLogger(EntreeSortieFichier.class.getName())
                                                           .log(Level.SEVERE, null, e);
-                                }
-                                catch(ParseException e) {
-                                    Logger.getLogger(EntreeSortieFichier.class.getName())
-                                                          .log(Level.SEVERE, null, e);
-                                }
+                            }
+                            catch(ParseException e) {
+                                Logger.getLogger(EntreeSortieFichier.class.getName())
+                                                         .log(Level.SEVERE, null, e);
+                                
                             }
                         }
                         return;

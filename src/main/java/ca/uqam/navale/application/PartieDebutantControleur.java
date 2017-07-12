@@ -4,14 +4,15 @@ import java.io.*;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.logging.Level;
-import java.time.LocalDateTime;
 import java.time.Duration;
 import javax.xml.bind.annotation.*;
-
-import ca.uqam.navale.domaine.*;
-import ca.uqam.navale.fondation.*;
+import javax.xml.bind.annotation.adapters.*;
+import org.joda.time.LocalDateTime;
+import org.joda.time.Seconds;
 import org.json.simple.parser.ParseException;
 
+import ca.uqam.navale.fondation.*;
+import ca.uqam.navale.domaine.*;
 
 @XmlRootElement
 public class PartieDebutantControleur implements PartieControleur {
@@ -24,11 +25,14 @@ public class PartieDebutantControleur implements PartieControleur {
     private TourIterateur tourIter;
 
     public PartieDebutantControleur() {
+        nbSecondesPartie = 0;
     	flotteJoueur = new Flotte();
         flotteAdversaire = new Flotte();
+        heureDebut = new LocalDateTime();
         tours = new TourListe();
         tourIter = tours.creerIterateur();
     }
+
     public boolean init() {
     
         boolean joueurCommence;
@@ -56,22 +60,22 @@ public class PartieDebutantControleur implements PartieControleur {
     	String evenement;
 
         evenement = flotteAdversaire.attaquer(c);    	
-    	tour = new Tour(tours.getDernier());      
+    	tour = new Tour(tourIter.dernier());    
         tour.setEvenement(evenement);
 
-        if (evenement == "Dans l'eau") {
+        if (evenement.equals("Dans l'eau")) {
             tour.setChampAdversaire(c.get_i(), c.get_j(), 'd');
         }
-        else if (evenement == "Touché" || evenement == "Coulé") {
+        else if (evenement.equals("Touché") || evenement.equals("Coulé")) {
             tour.setChampAdversaire(c.get_i(), c.get_j(), 't');
         }
-        else if (evenement == "Partie terminée") {
+        else if (evenement.equals("Partie terminée")) {
 
             int nbSecondesRecord = 0;
-            nbSecondesPartie = (int) Duration.between(heureDebut, LocalDateTime.now()).getSeconds();      
 
             try {
                 nbSecondesRecord = EntreeSortieFichier.recupererRecords().getTempsRecordDebutant();
+                nbSecondesPartie = Seconds.secondsBetween(heureDebut, LocalDateTime.now()).getSeconds();
             }
             catch (IOException e) {
                 Logger.getLogger(EntreeSortieFichier.class.getName()).log(Level.SEVERE, null, e);
@@ -101,28 +105,29 @@ public class PartieDebutantControleur implements PartieControleur {
 
         Case c;
         Tour tour;
-    	String messageAttaque;
+    	String evenement;
 
         do {
              c = new Case((int) (Math.random()* 10), (int) (Math.random()* 10));
-             messageAttaque = flotteJoueur.attaquer(c);
+             evenement = flotteJoueur.attaquer(c);
 
-    	} while(messageAttaque=="Déjà attaquée");
+    	} while(evenement.equals("Déjà attaquée"));
     	
-        tour = new Tour(tours.getDernier());
-        tour.setEvenement(messageAttaque);
+        tour = new Tour(tourIter.dernier());
+        tour.setEvenement(evenement);
 
-        if (messageAttaque == "Touché" || messageAttaque == "Coulé") {
+        if (evenement.equals("Touché") || evenement.equals("Coulé")) {
             tour.setChampJoueur(c.get_i(), c.get_j(), 't');
         }
-        else if (messageAttaque == "Partie terminée") {
+        else if (evenement.equals("Partie terminée")) {
             tour.setChampJoueur(c.get_i(), c.get_j(), 't');
             tour.setEvenement("Vous avez perdu");
         }
-        else if (messageAttaque == "Dans l'eau") {
+        else if (evenement.equals("Dans l'eau")) {
             tour.setChampJoueur(c.get_i(), c.get_j(), 'd');
         }
         tours.ajouter(tour);
+
     	return tour;
     }
     
@@ -142,6 +147,20 @@ public class PartieDebutantControleur implements PartieControleur {
         return this.tourIter.suivant();
     }
     
+    public Tour getPremierTour() {
+        return this.tourIter.premier();
+    } 
+    public Tour getDernierTour() {
+        // réinitialisation nécéssaire du TourItérateur : lors de la sérialization
+        // de l'objet a partir du fichier xml de sauvegarde, l'attribut de classe
+        // "TourListe" de tourIter devient une copie plutôt qu'une référence, ce qui
+        // cause problème lors de la visualisation de la partie. getDernierTour() est
+        // appelé après le chargement d'une sauvegarde. On en profite donc
+        // pour réinitialiser tourIter en lui redonnant une référence au bon objet. 
+        this.tourIter = tours.creerIterateur();  
+        return this.tourIter.dernier();
+    } 
+
     /* Met a jour le document de record
      * @param nom Le nom du detenteur du nouveau record
      * @param temps Le temps obtenu
@@ -151,8 +170,7 @@ public class PartieDebutantControleur implements PartieControleur {
         Records r = EntreeSortieFichier.recupererRecords();
         r.setNomRecordDebutant(nom);
         r.setTempsRecordDebutant(nbSecondesPartie);
-        EntreeSortieFichier.ecrireRecords(r);  
-        
+        EntreeSortieFichier.ecrireRecords(r);      
     }
 
     // getters

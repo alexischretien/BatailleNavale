@@ -1,12 +1,11 @@
 package ca.uqam.navale.fondation;
 
 import ca.uqam.navale.domaine.Records;
-import ca.uqam.navale.application.PartieControleur;
+import ca.uqam.navale.application.*;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.*;
-//import java.beans.XMLEncoder;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -16,6 +15,7 @@ public class EntreeSortieFichier {
 
     private static final String FICHIER_RECORDS = "records.json";
     private static final String FICHIER_SAUVEGARDE = "sauvegarde.xml";
+
     /* Permet d’écraser le fichier des records en le remplaçant par un fichier contenant les records en argument.
      * @param la records adverse cible
      */
@@ -69,22 +69,27 @@ public class EntreeSortieFichier {
         marshaller.marshal(partie, resultat);
         f.write(resultat.toString());
         f.close();
-        
-/* 
-        try {
-            XMLEncoder encoder = new XMLEncoder(new BufferedOutputStream(
-                                 new FileOutputStream(FICHIER_SAUVEGARDE)));
-            encoder.writeObject(partie);
-            encoder.close();
-        }
-        catch (IOException ex) {
-            Logger.getLogger(EntreeSortieFichier.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       */
     }
-    public static PartieControleur chargerSauvegarde() throws IOException {
-        // à compléter
-        return null;
+    public static PartieControleur chargerSauvegarde()  {
+   
+        PartieControleur partie = null;      
+        
+        try {
+            File fichierSauvegarde = new File(FICHIER_SAUVEGARDE);
+
+            if (fichierSauvegarde.exists()) {
+                Unmarshaller unmarshaller = JAXBContext.newInstance(PartieDebutantControleur.class, 
+                                                            PartieAvanceControleur.class).createUnmarshaller();
+                partie = (PartieControleur) unmarshaller.unmarshal(fichierSauvegarde);
+            }
+        }
+        catch (UnmarshalException e) {
+            Logger.getLogger(EntreeSortieFichier.class.getName()).log(Level.SEVERE, null, e);
+        }
+        catch (JAXBException e) {
+            Logger.getLogger(EntreeSortieFichier.class.getName()).log(Level.SEVERE, null, e);
+        }
+        return partie;
     } 
 }
 

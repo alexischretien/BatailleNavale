@@ -13,31 +13,45 @@ public class TourIterateur implements Iterateur {
         index = 0;
         tours = new TourListe();
     }
+
     public TourIterateur(TourListe tours) {
         this.index = 0;
         this.tours = tours;
     }
+
     public Tour precedent() {
 
         if(0 > index-1){
             return  tours.getElement(0);
         }
         else {
-            return tours.getElement(index-1);
+            --index; 
+            return tours.getElement(index);
         }
     }
+
     public Tour suivant() {
 
         if(tours.size()-1 < index+1){
             return  tours.getElement(tours.size()-1);
         }
         else {
-            return tours.getElement(index+1);
+            ++index;
+            return tours.getElement(index);
         }
     }
+    
+    public Tour premier() {
+        index = 0;
+        return tours.getElement(index);
+    }    
 
-    public Tour courant() {
-          
+    public Tour dernier() {
+        index = tours.size() -1;
+        return tours.getElement(index);
+    }
+
+    public Tour courant() {          
         return tours.getElement(index);
     }
 

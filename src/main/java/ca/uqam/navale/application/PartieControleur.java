@@ -1,7 +1,6 @@
 package ca.uqam.navale.application;
 
 import ca.uqam.navale.domaine.*;
-import ca.uqam.navale.fondation.*;
 
 import java.io.*;
 import java.util.*;
@@ -15,5 +14,7 @@ public interface PartieControleur {
     public Tour getAttaqueAdversaire();
     public Tour getTourPrecedent();
     public Tour getTourSuivant();
+    public Tour getPremierTour();
+    public Tour getDernierTour();
     public void miseAJourRecords(String nom) throws IOException, ParseException;
 }

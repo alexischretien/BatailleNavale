@@ -13,8 +13,8 @@ public class TourListe {
     }
 
     public TourIterateur creerIterateur() {
-        // à compléter
-        return null;
+        
+        return new TourIterateur(this);
     }
                          
     public void ajouter(Tour element) {
@@ -28,16 +28,6 @@ public class TourListe {
     public int size() {
         return elements.size();
     }   
-
-    public Tour getDernier() {
-
-        if (elements.size() > 0) {
-            return elements.get(elements.size() - 1);
-        }
-        else {
-            return null;
-        }
-    } 
 
     // getter
     public ArrayList<Tour> getElements() {
