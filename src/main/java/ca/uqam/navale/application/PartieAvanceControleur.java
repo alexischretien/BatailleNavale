@@ -22,6 +22,8 @@ public class PartieAvanceControleur implements PartieControleur {
     private int nbSecondesPartie;
     private TourListe tours;
     private TourIterateur tourIter;
+    private List<Case>  attaquesAdversaire;
+    private boolean joueurCommence;
 
     public PartieAvanceControleur() {
         nbSecondesPartie = 0;
@@ -30,20 +32,23 @@ public class PartieAvanceControleur implements PartieControleur {
         heureDebut = new LocalDateTime();
         tours = new TourListe();
         tourIter = tours.creerIterateur();
+        attaquesAdversaire= new ArrayList<Case>();
     }
 
     public boolean init() {
     
-        boolean joueurCommence;
         
-        joueurCommence = Math.random() < 0.5;
+        setJoueurCommence(Math.random() < 0.5);
+        joueurCommence = getJoueurCommence();
         flotteAdversaire = Flotte.genererFlotteAleatoire();
         tours.ajouter(new Tour(flotteJoueur, flotteAdversaire));        
         heureDebut = LocalDateTime.now();
 
         return joueurCommence;
     }
-    public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
+    
+
+	public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
 
         return flotteJoueur.positionnerNavire(i, j, horizontal, navireId);       
     }
@@ -53,20 +58,20 @@ public class PartieAvanceControleur implements PartieControleur {
      * @return le tour courant mis a jour
      * @see ca.uqam.navale.application.PartieControleur#attaquerAdversaire(ca.uqam.navale.domaine.Case)
      */
-    public Tour attaquerAdversaire(Case c) {
+    public Tour attaquerAdversaire(int i, int j) {
 
         Tour tour;
     	String evenement;
-        
-        evenement = flotteAdversaire.attaquer(c);    	
+    	   	
+        evenement = flotteAdversaire.attaquer(new Case(i, j));    	
     	tour = new Tour(tourIter.dernier());    
         tour.setEvenement(evenement);
 
         if (evenement.equals("Dans l'eau")) {
-            tour.setChampAdversaire(c.get_i(), c.get_j(), 'd');
+            tour.setChampAdversaire(i, j, 'd');
         }
         else if (evenement.equals("Touché") || evenement.equals("Coulé")) {
-            tour.setChampAdversaire(c.get_i(), c.get_j(), 't');
+            tour.setChampAdversaire(i, j, 't');
         }
         else if (evenement.equals("Partie terminée")) {
 
@@ -90,48 +95,112 @@ public class PartieAvanceControleur implements PartieControleur {
             else {
                 tour.setEvenement("Vous avez gagné");
             }
-            tour.setChampAdversaire(c.get_i(), c.get_j(), 't');    
+            tour.setChampAdversaire(i, j, 't');    
         }
         tours.ajouter(tour);
         return tour;
     }
    
     /*
-     * Tir au hazard jusqu'a ce qu'il touche une nouvelle case et met a jour le tour courant
+     * Tir au hazard jusqu'a ce qu'il touche un navire
+     * Lorsqu'il touche un navire, il cherche les cases environnantes jusqu'a ce qu'il coule un navire
      * @return le tour courant mis a jour
      * @see ca.uqam.navale.application.PartieControleur#getAttaqueAdversaire()
      */
     public Tour getAttaqueAdversaire() {
 
-        Case c;
+        Case c = null;
         Tour tour;
-    	String evenement;
-/*  
- *          METHODE DE GÉNÉRATION D'ATTAQUE DE NIVEAU AVANCÉ À FAIRE
- */
-        do {
-             c = new Case((int) (Math.random()* 10), (int) (Math.random()* 10));
-             evenement = flotteJoueur.attaquer(c);
-
-    	} while(evenement.equals("Déjà attaquée"));
+    	String evenement ="Déjà attaquée";
+        List<Case>  attaquesPrecedentes;
+        Tour tourPrecedent;
+        boolean attaqueEncours=false;
+        int i=0;
     	
-        tour = new Tour(tourIter.dernier());
-        tour.setEvenement(evenement);
+    	attaquesPrecedentes=getAttaquesAdverse();
+    	
+    	if(attaquesPrecedentes.size()-1<0){    		
+    		c = new Case((int) (Math.random()* 10), (int) (Math.random()* 10));
+            evenement = flotteJoueur.attaquer(c);
+            attaqueEncours=true;
+    	}    	
+    	else{
+    	tourPrecedent= tourIter.courant();
+    	i = attaquesPrecedentes.size()-1;
+    		while(i>=0 && !attaqueEncours){
+    			if(!getTourPrecedent().estPremierTour()){   				
+    				attaquesPrecedentes.get(i);    				
+    				if(tourPrecedent.estPremierTour()){
+    					if(joueurCommence){
+    						tourPrecedent=getTourSuivant();
+    						tourPrecedent=getTourSuivant(); 
+    					}
+    					else{
+    						tourPrecedent=getTourSuivant(); ;
+    					}    					    					
+    				}    				
+    				if(tourPrecedent.getEvenement().equals("Coulé")){        				
+        				i=-1;
+        			}
+        			else if(tourPrecedent.getEvenement().equals("Touché")){        				
+        				 if(attaquesPrecedentes.get(i).get_i()-1>=0 ){
+        					c = new Case(attaquesPrecedentes.get(i).get_i()-1, attaquesPrecedentes.get(i).get_j());
+        					evenement = flotteJoueur.attaquer(c);        					
+        					if(!evenement.equals("Déjà attaquée")){        						
+        						attaqueEncours=true;
+        					}    	                 
+        				 }
+        				 if(attaquesPrecedentes.get(i).get_j()-1>=0 && !attaqueEncours){
+        					c = new Case(attaquesPrecedentes.get(i).get_i(), attaquesPrecedentes.get(i).get_j()-1);
+        					evenement = flotteJoueur.attaquer(c);        					
+        					if(!evenement.equals("Déjà attaquée")){        						
+        						attaqueEncours=true;
+        					}
+        				 }    				
+        				 if(attaquesPrecedentes.get(i).get_i()+1<10 && !attaqueEncours){
+        					c = new Case(attaquesPrecedentes.get(i).get_i()+1, attaquesPrecedentes.get(i).get_j());
+        					evenement = flotteJoueur.attaquer(c);        					
+        					if(!evenement.equals("Déjà attaquée")){        						
+        						attaqueEncours=true;
+        					}
+        				 }    				
+        				 if(attaquesPrecedentes.get(i).get_j()+1<10 && !attaqueEncours){
+        					c = new Case(attaquesPrecedentes.get(i).get_i(), attaquesPrecedentes.get(i).get_j()+1);
+        					evenement = flotteJoueur.attaquer(c);        					
+        					if(!evenement.equals("Déjà attaquée")){        						
+        						attaqueEncours=true;
+        					}
+        				 }        				 
+        			}        			
+    			}
+    			--i;
+    			tourPrecedent=getTourPrecedent();
+    		}
+    		if(!attaqueEncours){    		    
+    			do {
+    			       c = new Case((int) (Math.random()* 10), (int) (Math.random()* 10));
+    			       evenement = flotteJoueur.attaquer(c);
+    			} while(evenement.equals("Déjà attaquée"));
+    		}    			    		
+    }    	
+    tour = new Tour(tourIter.dernier());
+    tour.setEvenement(evenement);
 
-        if (evenement.equals("Touché") || evenement.equals("Coulé")) {
-            tour.setChampJoueur(c.get_i(), c.get_j(), 't');
-        }
-        else if (evenement.equals("Partie terminée")) {
-            tour.setChampJoueur(c.get_i(), c.get_j(), 't');
-            tour.setEvenement("Vous avez perdu");
-        }
-        else if (evenement.equals("Dans l'eau")) {
-            tour.setChampJoueur(c.get_i(), c.get_j(), 'd');
-        }
-        tours.ajouter(tour);
-
-    	return tour; 
+    if (evenement.equals("Touché") || evenement.equals("Coulé")) {
+        tour.setChampJoueur(c.get_i(), c.get_j(), 't');
     }
+    else if (evenement.equals("Partie terminée")) {
+        tour.setChampJoueur(c.get_i(), c.get_j(), 't');
+        tour.setEvenement("Vous avez perdu");
+    }
+    else if (evenement.equals("Dans l'eau")) {
+        tour.setChampJoueur(c.get_i(), c.get_j(), 'd');
+     }
+     tours.ajouter(tour);
+     attaquesPrecedentes.add(attaquesPrecedentes.size(), c);
+     setAttaquesAdverse(attaquesPrecedentes);     
+     return tour; 
+ }
     
    /* Retourne le tour precedent
     * @return le tour precedent
@@ -152,13 +221,7 @@ public class PartieAvanceControleur implements PartieControleur {
     public Tour getPremierTour() {
         return this.tourIter.premier();
     } 
-    public Tour getDernierTour() {
-        // réinitialisation nécéssaire du TourItérateur : lors de la sérialization
-        // de l'objet a partir du fichier xml de sauvegarde, l'attribut de classe
-        // "TourListe" de tourIter devient une copie plutôt qu'une référence, ce qui
-        // cause problème lors de la visualisation de la partie. getDernierTour() n'est
-        // appelé uniquement qu'après le chargement d'une sauvegarde. On en profite donc
-        // pour réinitialiser tourIter en lui redonnant une référence au bon objet. 
+    public Tour getDernierTour() { 
         this.tourIter = tours.creerIterateur();  
         return this.tourIter.dernier();
     } 
@@ -194,6 +257,12 @@ public class PartieAvanceControleur implements PartieControleur {
     public TourIterateur getTourIter() {
         return tourIter;
     }
+    public List<Case> getAttaquesAdverse() {
+        return attaquesAdversaire;
+    }
+    private boolean getJoueurCommence() {		
+		return joueurCommence;
+	}
 
     // setters
     @XmlElement
@@ -219,5 +288,11 @@ public class PartieAvanceControleur implements PartieControleur {
     @XmlElement
     public void setTourIter(TourIterateur tourIter) {
         this.tourIter = tourIter;
+    }
+    public void setAttaquesAdverse(List<Case> attaquesAdversaire) {
+        this.attaquesAdversaire=attaquesAdversaire;
+    }
+    public void setJoueurCommence(boolean joueurCommence) {
+        this.joueurCommence=joueurCommence;
     }
 }

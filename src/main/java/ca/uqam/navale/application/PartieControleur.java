@@ -10,7 +10,7 @@ public interface PartieControleur {
 
     public boolean init();
     public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId);
-    public Tour attaquerAdversaire(Case c); 
+    public Tour attaquerAdversaire(int i, int j); 
     public Tour getAttaqueAdversaire();
     public Tour getTourPrecedent();
     public Tour getTourSuivant();

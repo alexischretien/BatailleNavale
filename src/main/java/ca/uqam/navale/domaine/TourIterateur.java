@@ -20,39 +20,67 @@ public class TourIterateur implements Iterateur {
     }
 
     public Tour precedent() {
+    
+        Tour t = null;
 
-        if(0 > index-1){
-            return  tours.getElement(0);
+        if (tours != null && tours.size() > 0) {
+            if(0 > index-1){
+                index = 0;
+            }
+            else {
+                --index; 
+            }
+            t = tours.getElement(index);
         }
-        else {
-            --index; 
-            return tours.getElement(index);
-        }
+        return t;
     }
 
     public Tour suivant() {
+        
+        Tour t = null;
 
-        if(tours.size()-1 < index+1){
-            return  tours.getElement(tours.size()-1);
+        if (tours != null && tours.size() > 0) {
+            if(tours.size()-1 < index+1){
+                index = tours.size() - 1;
+            }
+            else {
+                ++index;
+            }
+            t = tours.getElement(index);
         }
-        else {
-            ++index;
-            return tours.getElement(index);
-        }
+        return t;
     }
     
     public Tour premier() {
-        index = 0;
-        return tours.getElement(index);
+
+        Tour t = null;
+
+        if (tours != null && tours.size() > 0) {
+            index = 0;
+            t = tours.getElement(index);
+        }
+        return t;
     }    
 
     public Tour dernier() {
-        index = tours.size() -1;
-        return tours.getElement(index);
+    
+        Tour t = null;
+
+        if (tours != null && tours.size() > 0) {
+            index = tours.size() -1;
+            t = tours.getElement(index);
+        }
+        return t;
     }
 
-    public Tour courant() {          
-        return tours.getElement(index);
+    public Tour courant() {
+       
+        Tour t = null;
+
+        if (tours != null && tours.size() > index) {  
+            t = tours.getElement(index);
+        }
+        return t;
     }
 
     // getters

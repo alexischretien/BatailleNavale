@@ -50,24 +50,24 @@ public class PartieDebutantControleur implements PartieControleur {
     }
    
     /* Attaque une case adverse et retourne le resultat
-     * @param la case adverse cible
+     * @param  la case de l'attaque
      * @return le tour courant mis a jour
      * @see ca.uqam.navale.application.PartieControleur#attaquerAdversaire(ca.uqam.navale.domaine.Case)
      */
-    public Tour attaquerAdversaire(Case c) {
+    public Tour attaquerAdversaire(int i, int j) {
 
         Tour tour;
     	String evenement;
-
-        evenement = flotteAdversaire.attaquer(c);    	
+        
+        evenement = flotteAdversaire.attaquer(new Case(i, j));    	
     	tour = new Tour(tourIter.dernier());    
         tour.setEvenement(evenement);
 
         if (evenement.equals("Dans l'eau")) {
-            tour.setChampAdversaire(c.get_i(), c.get_j(), 'd');
+            tour.setChampAdversaire(i, j, 'd');
         }
         else if (evenement.equals("Touché") || evenement.equals("Coulé")) {
-            tour.setChampAdversaire(c.get_i(), c.get_j(), 't');
+            tour.setChampAdversaire(i, j, 't');
         }
         else if (evenement.equals("Partie terminée")) {
 
@@ -90,7 +90,7 @@ public class PartieDebutantControleur implements PartieControleur {
             else {
                 tour.setEvenement("Vous avez gagné");
             }
-            tour.setChampAdversaire(c.get_i(), c.get_j(), 't');    
+            tour.setChampAdversaire(i, j, 't');    
         }
         tours.ajouter(tour);
         return tour;
@@ -150,13 +150,7 @@ public class PartieDebutantControleur implements PartieControleur {
     public Tour getPremierTour() {
         return this.tourIter.premier();
     } 
-    public Tour getDernierTour() {
-        // réinitialisation nécéssaire du TourItérateur : lors de la sérialization
-        // de l'objet a partir du fichier xml de sauvegarde, l'attribut de classe
-        // "TourListe" de tourIter devient une copie plutôt qu'une référence, ce qui
-        // cause problème lors de la visualisation de la partie. getDernierTour() est
-        // appelé après le chargement d'une sauvegarde. On en profite donc
-        // pour réinitialiser tourIter en lui redonnant une référence au bon objet. 
+    public Tour getDernierTour() { 
         this.tourIter = tours.creerIterateur();  
         return this.tourIter.dernier();
     } 

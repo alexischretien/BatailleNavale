@@ -7,4 +7,5 @@ public interface Liste<E extends Tour> {
     public Iterateur<E> creerIterateur();
     public void ajouter(E element);
     public E getElement(int index);
+    public int size();
 }

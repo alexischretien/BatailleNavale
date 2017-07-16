@@ -14,12 +14,6 @@ import ca.uqam.navale.domaine.Records;
 
 public class FenetreNavale extends JFrame {
 
-    private static final int   NAVIRE_INVALIDE_ID    = -1;
-    private static final int   PORTE_AVION_ID        =  0;
-    private static final int   CROISEUR_ID           =  1;
-    private static final int   CONTRE_TORPILLEURS_ID =  2;
-    private static final int   SOUS_MARIN_ID         =  3; 
-    private static final int   TORPILLEUR_ID         =  4;
     private static final Color COULEUR_CASE_INVALIDE = new Color(0, 0, 0);
     private static final Color BLEU        = new Color(0, 0, 230);
     private static final Color BLEU_FONCE  = new Color(0, 0, 102);
@@ -37,7 +31,7 @@ public class FenetreNavale extends JFrame {
     private JRadioButton boutonRadioDebutant;
     private JRadioButton boutonRadioAvance;
     private JRadioButton boutonRadioEnLigne;
-    private JButton boutonPartie;
+    private JButton boutonDemarrer;
     private JButton boutonRecharger;
     private JButton boutonRecords;
     private JButton boutonJouer;
@@ -66,7 +60,7 @@ public class FenetreNavale extends JFrame {
         boutonRadioAvance   = new JRadioButton("Avancé");
         boutonRadioEnLigne  = new JRadioButton("En ligne");
 
-        boutonPartie    = new JButton("Nouvelle partie");
+        boutonDemarrer  = new JButton("Nouvelle partie");
         boutonRecharger = new JButton("Recharger une partie");
         boutonRecords   = new JButton("Meilleurs temps");
         boutonJouer     = new JButton("Jouer");
@@ -83,7 +77,7 @@ public class FenetreNavale extends JFrame {
         boutonRadioDebutant.addActionListener(ecouteur);
         boutonRadioAvance.addActionListener(ecouteur);
 
-        boutonPartie.addActionListener(ecouteur);
+        boutonDemarrer.addActionListener(ecouteur);
         boutonRecharger.addActionListener(ecouteur);
         boutonRecords.addActionListener(ecouteur);
         boutonJouer.addActionListener(ecouteur);
@@ -123,7 +117,7 @@ public class FenetreNavale extends JFrame {
         panneauBoutonsRadio.add(boutonRadioAvance);
         panneauBoutonsRadio.add(boutonRadioEnLigne);
 
-        panneauBoutons.add(boutonPartie);
+        panneauBoutons.add(boutonDemarrer);
         panneauBoutons.add(panneauBoutonsRadio);
         panneauBoutons.add(boutonRecharger);
         panneauBoutons.add(boutonRecords);
@@ -131,11 +125,6 @@ public class FenetreNavale extends JFrame {
 
         add(panneauBoutons);
         pack();
-    }
-
-    public void initFenetreAttente() {
-
-    // Pas à implémenter pour l'instant, ne sert que pour les parties en ligne.
     }
 
     public void initFenetrePlacementNavires() {
@@ -404,26 +393,8 @@ public class FenetreNavale extends JFrame {
         }
         messageEvenement.setText(tour.getEvenement());
        
-        System.out.println("tour.evenement == " + tour.getEvenement()); 
-        System.out.println("estPremierTour() == " + tour.estPremierTour());
-        System.out.println("estDernierTour() == " + tour.estDernierTour());
         boutonTourPrecedent.setEnabled(!tour.estPremierTour());
         boutonTourSuivant.setEnabled(!tour.estDernierTour());
-    }
-
-    public boolean estNavireHorizontal() {
-        
-        return boutonHor.isSelected(); 
-    }
-
-    public int getNavireId() {
-        
-        if (boutonPorteAvion.isSelected())        return PORTE_AVION_ID;
-        if (boutonCroiseur.isSelected())          return CROISEUR_ID;
-        if (boutonContreTorpilleurs.isSelected()) return CONTRE_TORPILLEURS_ID;
-        if (boutonSousMarin.isSelected())         return SOUS_MARIN_ID;
-        if (boutonTorpilleur.isSelected())        return TORPILLEUR_ID;
-        return NAVIRE_INVALIDE_ID;
     }
     
     private Color getCouleurCase(char contenu, boolean caseJoueur) {
@@ -442,8 +413,8 @@ public class FenetreNavale extends JFrame {
     }
 
     // getters
-    public JButton getBoutonPartie() {
-        return boutonPartie;
+    public JButton getBoutonDemarrer() {
+        return boutonDemarrer;
     }
     public JButton getBoutonRecharger() {
         return boutonRecharger;
@@ -486,5 +457,26 @@ public class FenetreNavale extends JFrame {
     }
     public JRadioButton getBoutonRadioEnLigne() {
         return boutonRadioEnLigne;
+    }
+    public JRadioButton getBoutonHor() {
+        return boutonHor;
+    }
+    public JRadioButton getBoutonVer() {
+        return boutonVer;
+    }
+    public JRadioButton getBoutonPorteAvion() {
+        return boutonPorteAvion;
+    }
+    public JRadioButton getBoutonCroiseur() {
+        return boutonCroiseur;
+    }
+    public JRadioButton getBoutonContreTorpilleurs() {
+        return boutonContreTorpilleurs;
+    }
+    public JRadioButton getBoutonSousMarin() {
+        return boutonSousMarin;
+    }
+    public JRadioButton getBoutonTorpilleur() {
+        return boutonTorpilleur;
     }
 }

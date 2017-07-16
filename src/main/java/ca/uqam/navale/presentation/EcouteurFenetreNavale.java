@@ -16,6 +16,13 @@ import org.json.simple.parser.ParseException;
 
 public class EcouteurFenetreNavale implements ActionListener {
 
+    private static final int   NAVIRE_INVALIDE_ID    = -1;
+    private static final int   PORTE_AVION_ID        =  0;
+    private static final int   CROISEUR_ID           =  1;
+    private static final int   CONTRE_TORPILLEURS_ID =  2;
+    private static final int   SOUS_MARIN_ID         =  3;
+    private static final int   TORPILLEUR_ID         =  4;
+
     private FenetreNavale fenetre;
     PartieControleur  partieControleur;
     
@@ -28,7 +35,7 @@ public class EcouteurFenetreNavale implements ActionListener {
         Object source = evt.getSource();
 
         // lancement d'une partie
-        if (source == fenetre.getBoutonPartie()) {
+        if (source == fenetre.getBoutonDemarrer()) {
 
             if (fenetre.getBoutonRadioDebutant().isSelected()) {
                 partieControleur = new PartieDebutantControleur();
@@ -120,14 +127,14 @@ public class EcouteurFenetreNavale implements ActionListener {
                     // placement d'un navire en debutant de partie
                     if (source == fenetre.getGrilleJoueur(i, j)) {
                        List<Case> casesOccupees = partieControleur.positionnerNavire(i, j, 
-                                                                  fenetre.estNavireHorizontal(), 
-                                                                  fenetre.getNavireId()); 
+                                                                              estNavireHorizontal(), 
+                                                                              getNavireId()); 
                        fenetre.miseAJourPlacementsNavires(casesOccupees);        
                        return; 
                     }
                     // le joueur attaque une case de l'adversaire
                     else if (source == fenetre.getGrilleAdversaire(i, j)) {
-                        Tour tour = partieControleur.attaquerAdversaire(new Case(i, j));
+                        Tour tour = partieControleur.attaquerAdversaire(i, j);
                         fenetre.miseAJourPartie(tour, false);
                          
                         if (!tour.estDernierTour()) {
@@ -160,4 +167,20 @@ public class EcouteurFenetreNavale implements ActionListener {
             }
         }
     }
+
+    private boolean estNavireHorizontal() {
+
+        return fenetre.getBoutonHor().isSelected();
+    }
+
+    private int getNavireId() {
+
+        if (fenetre.getBoutonPorteAvion().isSelected())        return PORTE_AVION_ID;
+        if (fenetre.getBoutonCroiseur().isSelected())          return CROISEUR_ID;
+        if (fenetre.getBoutonContreTorpilleurs().isSelected()) return CONTRE_TORPILLEURS_ID;
+        if (fenetre.getBoutonSousMarin().isSelected())         return SOUS_MARIN_ID;
+        if (fenetre.getBoutonTorpilleur().isSelected())        return TORPILLEUR_ID;
+        return NAVIRE_INVALIDE_ID;
+    }
+
 }

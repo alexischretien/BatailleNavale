@@ -6,6 +6,14 @@ import java.util.*;
 @XmlRootElement
 public class Flotte {
 
+    private static final int[] LONGUEUR = {5, 4, 3, 3, 2};
+    private static final int   NAVIRE_INVALIDE_ID    = -1;
+    private static final int   PORTE_AVION_ID        =  0;
+    private static final int   CROISEUR_ID           =  1;
+    private static final int   CONTRE_TORPILLEURS_ID =  2;
+    private static final int   SOUS_MARIN_ID         =  3;
+    private static final int   TORPILLEUR_ID         =  4;
+
     List<Case> porte_avion;
     List<Case> croiseur;
     List<Case> contre_torpilleurs;
@@ -24,31 +32,33 @@ public class Flotte {
 
     public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
 
-        int longueur = -1;
+        int longueur = NAVIRE_INVALIDE_ID;
         List<Case> navire = new ArrayList<Case>();
         List<Case> casesOccupees = this.getCasesOccupees();
-
-        if (navireId == 0) {
-            casesOccupees.removeAll(porte_avion);
-            longueur = 5;
+    
+        if (navireId >= PORTE_AVION_ID && navireId <= TORPILLEUR_ID) {
+            if (navireId == PORTE_AVION_ID) {
+                casesOccupees.removeAll(porte_avion);
+            }
+            else if (navireId == CROISEUR_ID) {
+                casesOccupees.removeAll(croiseur);
+            }
+            else if (navireId == CONTRE_TORPILLEURS_ID) {
+                casesOccupees.removeAll(contre_torpilleurs);
+            }
+            else if (navireId == SOUS_MARIN_ID) {
+                casesOccupees.removeAll(sous_marin);
+            }
+            else {
+                casesOccupees.removeAll(torpilleur);
+            }
+            longueur = LONGUEUR[navireId];
+            
         }
-        else if (navireId == 1) {
-            casesOccupees.removeAll(croiseur);
-            longueur = 4;
+        else {
+            longueur = -1;
         }
-        else if (navireId == 2) {
-            casesOccupees.removeAll(contre_torpilleurs);
-            longueur = 3;
-        }
-        else if (navireId == 3) {
-            casesOccupees.removeAll(sous_marin);
-            longueur = 3;
-        }
-        else if (navireId == 4) {
-            casesOccupees.removeAll(torpilleur);
-            longueur = 2;
-        }
-
+      
         while (longueur > 0) {
             navire.add(new Case(i, j));            
             if (horizontal)  ++j; 
@@ -69,15 +79,16 @@ public class Flotte {
                 }
             }
         }
+  
         // si positionnement valide, mise à jour de la Flotte
-        if (navireId == 0) porte_avion = navire;
-        else if (navireId == 1) croiseur = navire;
-        else if (navireId == 2) contre_torpilleurs = navire;
-        else if (navireId == 3) sous_marin = navire;
-        else if (navireId == 4) torpilleur = navire;
+        if (navireId == PORTE_AVION_ID)             porte_avion = navire;
+        else if (navireId == CROISEUR_ID)           croiseur = navire;
+        else if (navireId == CONTRE_TORPILLEURS_ID) contre_torpilleurs = navire;
+        else if (navireId == SOUS_MARIN_ID)         sous_marin = navire;
+        else if (navireId == TORPILLEUR_ID)         torpilleur = navire;
 
         casesOccupees.addAll(navire);
-  
+
         return casesOccupees;
                 
     }
