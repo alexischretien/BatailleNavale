@@ -1,3 +1,15 @@
+/* UQAM - été 2017 - INF5153 - Groupe 20 - TP3
+ *
+ * FenetreNavale.java - Fichier source de la classe FenetreNavale, offrant les
+ *                      méthodes pour créer et mettre à jours les composantes
+ *                      de l'interface graphique de l'utilisateur.
+ *
+ * @Auteurs  Alexis Chrétien  (CHRA25049209)
+ *           Bernard Houle    (HOUB12129001)
+ *           Tom Berthiaume   (BERT17039105)
+ * @Version  17 juillet 2017
+ */
+
 package ca.uqam.navale.presentation;
 
 import java.util.*;
@@ -337,7 +349,7 @@ public class FenetreNavale extends JFrame {
         pack();
     }
     
-    public void miseAJourPlacementsNavires(List<Case> casesOccupees) {
+    public void miseAJourPlacementNavires(List<Case> casesOccupees) {
 
         for (int i = 0 ; i < 10 ; ++i) {
             for (int j = 0 ; j < 10 ; ++j) {

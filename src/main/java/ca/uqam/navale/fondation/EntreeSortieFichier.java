@@ -1,3 +1,15 @@
+/* UQAM - été 2017 - INF5153 - Groupe 20 - TP3
+ *
+ * EntreeSortieFichier.java - Fichier source de la classe EntreeSortieFichier,
+ *                            offrant les méthodes pour lire et écrire les 
+ *                            fichiers du système.
+ *
+ * @Auteurs  Alexis Chrétien  (CHRA25049209)
+ *           Bernard Houle    (HOUB12129001)
+ *           Tom Berthiaume   (BERT17039105)
+ * @Version  17 juillet 2017
+ */
+
 package ca.uqam.navale.fondation;
 
 import ca.uqam.navale.domaine.Records;
@@ -16,7 +28,7 @@ public class EntreeSortieFichier {
     private static final String FICHIER_RECORDS = "records.json";
     private static final String FICHIER_SAUVEGARDE = "sauvegarde.xml";
 
-    /* Permet d’écraser le fichier des records en le remplaçant par un fichier contenant les records en argument.
+    /* Permet d’ecraser le fichier des records en le remplaçant par un fichier contenant les records en argument.
      * @param la records adverse cible
      */
     public static void ecrireRecords(Records records){
@@ -37,7 +49,7 @@ public class EntreeSortieFichier {
         }
     }
     
-     /* Permet de créer et de retourner l’instance de Records contenu dans le fichier des records.
+     /* Permet de creer et de retourner l’instance de Records contenu dans le fichier des records.
      *  @return Records dans le fichier des records
      */
     public static Records recupererRecords() throws IOException, ParseException {
@@ -56,6 +68,11 @@ public class EntreeSortieFichier {
                            tempsRecordAvance.intValue());
 
     }
+
+   /* Permet d’ecraser le fichier de sauvegarde en le remplacant par un fichier 
+    * contenant les donnees de l’instance de PartieControleur
+    * @param la instance du PartieControleur
+    */
     public static void ecrireSauvegarde(PartieControleur partie) throws IOException, JAXBException {
    
         File fichierSauvegarde = new File(FICHIER_SAUVEGARDE);
@@ -70,6 +87,10 @@ public class EntreeSortieFichier {
         f.write(resultat.toString());
         f.close();
     }
+
+   /* Permet de retourner l’instance de PartieControleur sauvegardee dans le fichier de sauvegarde
+    * @return l'instance de PartieControleur
+    */
     public static PartieControleur chargerSauvegarde()  {
    
         PartieControleur partie = null;      

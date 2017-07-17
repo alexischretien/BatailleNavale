@@ -1,3 +1,21 @@
+/* UQAM - été 2017 - INF5153 - Groupe 20 - TP3
+ *
+ * Flotte.java - Fichier source de la classe Flotte, offrant une représentation 
+ *               de l'état de la flotte d'une joueur en conservant les cases 
+ *               non-attaquées et occupées par un navire du joueur, ainsi que les
+ *               cases qui ont été attaquées par l'adversaire. 
+ *    
+ *               La classe offre également des méthodes pour placer un navire, pour
+ *               générer une instance de flotte valide aléatoire et pour mettre à
+ *               jour l'état de la flotte suite à une attaque en renvoyant un message
+ *               d'événement. 
+ *
+ * @Auteurs  Alexis Chrétien  (CHRA25049209)
+ *           Bernard Houle    (HOUB12129001)
+ *           Tom Berthiaume   (BERT17039105)
+ * @Version  17 juillet 2017
+ */
+
 package ca.uqam.navale.domaine;
 
 import javax.xml.bind.annotation.*;
@@ -21,6 +39,7 @@ public class Flotte {
     List<Case> torpilleur;
     List<Case> cases_attaquees;
 
+    // Constructeur
     public Flotte() {
         porte_avion        = new ArrayList<Case>();
         croiseur           = new ArrayList<Case>();
@@ -29,6 +48,14 @@ public class Flotte {
         torpilleur         = new ArrayList<Case>();
         cases_attaquees    = new ArrayList<Case>();
     }
+
+   /* Postionne un navire dans la flotte si les donnees de postionnement sont valides.
+    *
+    * @param i, j        position initial du navire en coordonne(i,j)
+    * @param horizontal  vrai s'il  est horizontal, faux si vertical
+    * @param navireId    integer du type navire
+    * @return liste de case occupe par les navires de la flotte
+    */
 
     public List<Case> positionnerNavire(int i, int j, boolean horizontal, int navireId) {
 
@@ -93,6 +120,12 @@ public class Flotte {
                 
     }
 
+    /* Determine le resultat d'une attaque par torpille et renvoie le message
+     * de l'evenement associe
+     *
+     * @param c   la case de l'attaque
+     * @return    le message de l'evenement
+     */
     public String attaquer(Case c) {
            
          List<List<Case>> listeNavires = getListeNavires();
@@ -124,6 +157,11 @@ public class Flotte {
         return "Dans l'eau";
     }
 
+    /*
+     * Genere une instance de flotte initiale aleatoire et valide
+     *
+     * @return   une nouvelle flotte aleatoire et valide
+     */
     public static Flotte genererFlotteAleatoire() {
 
         boolean horizontal;
@@ -143,7 +181,13 @@ public class Flotte {
         return flotteAleatoire;
     }
 
-    public List<Case> getCasesOccupees() {
+    /*
+     * Retourne toutes les positions des cases occupees par les differents 
+     * navires de la flotte
+     *
+     * @return   la liste des cases occupees par les navires de la flotte
+     */
+    private List<Case> getCasesOccupees() {
 
         List<Case> casesOccupees = new ArrayList<Case>();
 
@@ -155,6 +199,11 @@ public class Flotte {
         return casesOccupees;
     }
 
+    /*
+     * Retourne la liste des navires/attributs de la flotte
+     *
+     * @return la liste de liste de cases occupees par chaque navire
+     */
     private List<List<Case>> getListeNavires() {
     
         List<List<Case>> l = new ArrayList<List<Case>>();

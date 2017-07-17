@@ -1,3 +1,16 @@
+/* UQAM - été 2017 - INF5153 - Groupe 20 - TP3
+ *
+ * EcouteurFenetreNavale.java - Fichier source de la classe EcouteurFenetreNavale, 
+ *			        qui reçoit et gère les événements soulevés par les 
+ *			        instances de classes héritant de la classe abstraite 
+ *				"AsbtractButton" de la librairie "Swing".
+ *
+ * @Auteurs  Alexis Chrétien  (CHRA25049209)
+ *           Bernard Houle    (HOUB12129001)
+ *           Tom Berthiaume   (BERT17039105)
+ * @Version  17 juillet 2017
+ */
+
 package ca.uqam.navale.presentation;
 
 import java.io.*;
@@ -129,7 +142,7 @@ public class EcouteurFenetreNavale implements ActionListener {
                        List<Case> casesOccupees = partieControleur.positionnerNavire(i, j, 
                                                                               estNavireHorizontal(), 
                                                                               getNavireId()); 
-                       fenetre.miseAJourPlacementsNavires(casesOccupees);        
+                       fenetre.miseAJourPlacementNavires(casesOccupees);        
                        return; 
                     }
                     // le joueur attaque une case de l'adversaire

@@ -1,3 +1,15 @@
+/* UQAM - été 2017 - INF5153 - Groupe 20 - TP3
+ *
+ * TourIterateur.java - Fichier source de la classe TourIterateur implémentant
+ *                      l'interface Iterateur et permettant d'itérer sur les tours
+ *                      stockés dans un objet de classe TourListe
+ *
+ * @Auteurs  Alexis Chrétien  (CHRA25049209)
+ *           Bernard Houle    (HOUB12129001)
+ *           Tom Berthiaume   (BERT17039105)
+ * @Version  17 juillet 2017
+ */
+
 package ca.uqam.navale.domaine;
 
 import javax.xml.bind.annotation.*;

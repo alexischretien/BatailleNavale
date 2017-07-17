@@ -1,3 +1,16 @@
+/* UQAM - été 2017 - INF5153 - Groupe 20 - TP3
+ *
+ * PartieDebutantControleur.java - Fichier source de la classe PartieDebutantControleur
+ *                                 offrant les méthodes pour manipuler la logique du
+ *                                 du domaine liée à une partie contre ordinateur de
+ *                                 niveau debutant.
+ *
+ * @Auteurs  Alexis Chrétien  (CHRA25049209)
+ *           Bernard Houle    (HOUB12129001)
+ *           Tom Berthiaume   (BERT17039105)
+ * @Version  17 juillet 2017
+ */
+
 package ca.uqam.navale.application;
 
 import java.io.*;
@@ -21,9 +34,10 @@ public class PartieDebutantControleur implements PartieControleur {
     private Flotte flotteAdversaire;
     private LocalDateTime heureDebut;
     private int nbSecondesPartie;
-    private TourListe tours;
-    private TourIterateur tourIter;
+    private Liste<Tour> tours;
+    private Iterateur<Tour> tourIter;
 
+    // Constructeur
     public PartieDebutantControleur() {
         nbSecondesPartie = 0;
     	flotteJoueur = new Flotte();
@@ -33,6 +47,11 @@ public class PartieDebutantControleur implements PartieControleur {
         tourIter = tours.creerIterateur();
     }
 
+   /*
+    * Initialise les donnees de la partie
+    *
+    * @return "true" si le joueur commence, "false" sinon
+    */
     public boolean init() {
     
         boolean joueurCommence;
@@ -50,9 +69,10 @@ public class PartieDebutantControleur implements PartieControleur {
     }
    
     /* Attaque une case adverse et retourne le resultat
-     * @param  la case de l'attaque
+     * 
+     * @param i  la coordonnee en i de la case de l'attaque
+     * @param j  la coordonnee en j de la case de l'attaque
      * @return le tour courant mis a jour
-     * @see ca.uqam.navale.application.PartieControleur#attaquerAdversaire(ca.uqam.navale.domaine.Case)
      */
     public Tour attaquerAdversaire(int i, int j) {
 
@@ -98,8 +118,8 @@ public class PartieDebutantControleur implements PartieControleur {
    
     /*
      * Tir au hazard jusqu'a ce qu'il touche une nouvelle case et met a jour le tour courant
+     *
      * @return le tour courant mis a jour
-     * @see ca.uqam.navale.application.PartieControleur#getAttaqueAdversaire()
      */
     public Tour getAttaqueAdversaire() {
 
@@ -132,33 +152,41 @@ public class PartieDebutantControleur implements PartieControleur {
     }
     
    /* Retourne le tour precedent
+    *
     * @return le tour precedent
-    * @see ca.uqam.navale.application.PartieControleur#getTourPrecedent()
     */
     public Tour getTourPrecedent() {           	
         return this.tourIter.precedent();
     }
     
-    /*Retourne le tour suivant
-    * @return le tour suivant
-     * @see ca.uqam.navale.application.PartieControleur#getTourSuivant()
+    /* Retourne le tour suivant
+     *
+     * @return le tour suivant
      */
     public Tour getTourSuivant() {        
         return this.tourIter.suivant();
     }
     
+    /* Retourne le premier tour
+     *
+     * @return  le premier tour
+     */
     public Tour getPremierTour() {
         return this.tourIter.premier();
     } 
+
+    /* Retourne le dernier tour
+     *
+     * @return  le dernier tour
+     */
     public Tour getDernierTour() { 
         this.tourIter = tours.creerIterateur();  
         return this.tourIter.dernier();
     } 
 
     /* Met a jour le document de record
-     * @param nom Le nom du detenteur du nouveau record
-     * @param temps Le temps obtenu
-     * @see ca.uqam.navale.application.PartieControleur#miseAJourRecords(java.lang.String, int)
+     *
+     * @param nom   Le nom du detenteur du nouveau record
      */
     public void miseAJourRecords(String nom) throws IOException, ParseException  {
         Records r = EntreeSortieFichier.recupererRecords();
@@ -180,10 +208,10 @@ public class PartieDebutantControleur implements PartieControleur {
     public int getNbSecondesPartie() {
         return nbSecondesPartie;
     }
-    public TourListe getTours() {
+    public Liste<Tour> getTours() {
         return tours;
     } 
-    public TourIterateur getTourIter() {
+    public Iterateur<Tour> getTourIter() {
         return tourIter;
     }
 
@@ -204,12 +232,12 @@ public class PartieDebutantControleur implements PartieControleur {
     public void setNbSecondesPartie(int nbSecondesPartie) {
         this.nbSecondesPartie = nbSecondesPartie;
     }
-    @XmlElement
-    public void setTours(TourListe tours) {
+    @XmlElementRefs({@XmlElementRef(type=TourListe.class)})
+    public void setTours(Liste<Tour> tours) {
         this.tours = tours;
     }
-    @XmlElement
-    public void setTourIter(TourIterateur tourIter) {
+    @XmlElementRefs({@XmlElementRef(type=TourIterateur.class)})
+    public void setTourIter(Iterateur<Tour> tourIter) {
         this.tourIter = tourIter;
     }
 }
