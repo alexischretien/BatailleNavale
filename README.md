@@ -12,9 +12,9 @@ ainsi que de visualiser le déroulement d'une partie terminée.
 
 ## Auteurs
 
-* Alexis Chrétien  (CHRA25049209)
-* Bernard Houle    (HOUB12129001)
-* Tom Berthiaume   (BERT17039105)
+* Alexis Chrétien 
+* Bernard Houle   
+* Tom Berthiaume  
 
 ## Installation et exécution
 
